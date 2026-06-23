@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,9 @@
       --shadow: rgba(0, 0, 0, .66);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html,
     body {
@@ -55,8 +58,8 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(0,0,0,.46), transparent 18%, transparent 74%, rgba(0,0,0,.64)),
-        linear-gradient(180deg, rgba(0,0,0,.18), transparent 22%, transparent 72%, rgba(0,0,0,.74));
+        linear-gradient(90deg, rgba(0, 0, 0, .46), transparent 18%, transparent 74%, rgba(0, 0, 0, .64)),
+        linear-gradient(180deg, rgba(0, 0, 0, .18), transparent 22%, transparent 72%, rgba(0, 0, 0, .74));
     }
 
     #track-title {
@@ -86,7 +89,9 @@
       padding: 0 18vw;
     }
 
-    #track-title:empty { display: none; }
+    #track-title:empty {
+      display: none;
+    }
 
     #dropCopy {
       position: absolute;
@@ -98,7 +103,7 @@
       font-weight: 800;
       letter-spacing: -.045em;
       line-height: .95;
-      text-shadow: 0 8px 28px rgba(0,0,0,.88), 0 0 16px rgba(0,255,200,.30);
+      text-shadow: 0 8px 28px rgba(0, 0, 0, .88), 0 0 16px rgba(0, 255, 200, .30);
       pointer-events: none;
       opacity: .95;
       transition: opacity .2s ease;
@@ -114,8 +119,13 @@
       margin-top: .4em;
     }
 
-    body.hasTracks #dropCopy { opacity: .18; }
-    body.isPlaying #dropCopy { opacity: 0; }
+    body.hasTracks #dropCopy {
+      opacity: .18;
+    }
+
+    body.isPlaying #dropCopy {
+      opacity: 0;
+    }
 
     #playlist {
       position: absolute;
@@ -126,10 +136,10 @@
       width: min(420px, calc(100vw - 36px));
       display: flex;
       flex-direction: column;
-      background: linear-gradient(180deg, rgba(18,22,24,.88), rgba(5,7,8,.82));
+      background: linear-gradient(180deg, rgba(18, 22, 24, .88), rgba(5, 7, 8, .82));
       border: 1px solid var(--line);
       border-radius: 14px;
-      box-shadow: 0 24px 70px var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
+      box-shadow: 0 24px 70px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .08);
       overflow: hidden;
       backdrop-filter: blur(8px);
     }
@@ -141,7 +151,7 @@
       gap: 12px;
       padding: 12px 14px;
       border-bottom: 1px solid var(--line-soft);
-      background: rgba(0,0,0,.28);
+      background: rgba(0, 0, 0, .28);
     }
 
     #playlistHeader strong {
@@ -161,7 +171,7 @@
       list-style: none;
       overflow: auto;
       scrollbar-width: thin;
-      scrollbar-color: rgba(0,255,200,.55) rgba(0,0,0,.35);
+      scrollbar-color: rgba(0, 255, 200, .55) rgba(0, 0, 0, .35);
     }
 
     #trackList li {
@@ -178,14 +188,14 @@
     }
 
     #trackList li:hover {
-      border-color: rgba(0,255,200,.20);
-      background: rgba(0,255,200,.055);
+      border-color: rgba(0, 255, 200, .20);
+      background: rgba(0, 255, 200, .055);
     }
 
     #trackList li.active {
-      border-color: rgba(0,255,200,.45);
-      background: rgba(0,255,200,.12);
-      box-shadow: inset 3px 0 0 rgba(0,255,200,.8);
+      border-color: rgba(0, 255, 200, .45);
+      background: rgba(0, 255, 200, .12);
+      box-shadow: inset 3px 0 0 rgba(0, 255, 200, .8);
     }
 
     #trackList .nr {
@@ -213,7 +223,7 @@
       padding: 18px 14px;
       color: var(--muted);
       line-height: 1.45;
-      border: 1px dashed rgba(255,255,255,.16);
+      border: 1px dashed rgba(255, 255, 255, .16);
       border-radius: 10px;
       margin: 8px;
       text-align: center;
@@ -231,10 +241,10 @@
       align-items: center;
       gap: 12px;
       padding: 7px 10px;
-      background: linear-gradient(180deg, rgba(26,30,33,.94), rgba(5,6,7,.94));
+      background: linear-gradient(180deg, rgba(26, 30, 33, .94), rgba(5, 6, 7, .94));
       border: 1px solid var(--line);
       border-radius: 14px;
-      box-shadow: 0 18px 58px var(--shadow), inset 0 1px 0 rgba(255,255,255,.10);
+      box-shadow: 0 18px 58px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .10);
       backdrop-filter: blur(8px);
     }
 
@@ -247,7 +257,7 @@
       font-size: 17px;
       letter-spacing: -.06em;
       color: #ffffff;
-      text-shadow: 0 0 12px rgba(0,255,200,.34);
+      text-shadow: 0 0 12px rgba(0, 255, 200, .34);
       white-space: nowrap;
     }
 
@@ -265,8 +275,8 @@
     }
 
     button {
-      border: 1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.035));
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .035));
       color: var(--text);
       min-width: 34px;
       height: 30px;
@@ -274,16 +284,18 @@
       border-radius: 9px;
       cursor: pointer;
       font-weight: 800;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09);
     }
 
     button:hover {
-      border-color: rgba(0,255,200,.38);
+      border-color: rgba(0, 255, 200, .38);
       color: #fff;
-      background: rgba(0,255,200,.11);
+      background: rgba(0, 255, 200, .11);
     }
 
-    button:active { transform: translateY(1px); }
+    button:active {
+      transform: translateY(1px);
+    }
 
     button:disabled {
       opacity: .48;
@@ -327,7 +339,9 @@
       cursor: pointer;
     }
 
-    #audio-file { display: none; }
+    #audio-file {
+      display: none;
+    }
 
     body.dragover #app::after {
       content: "Drag & Drop Audio";
@@ -336,19 +350,24 @@
       z-index: 20;
       display: grid;
       place-items: center;
-      border: 2px dashed rgba(0,255,200,.70);
+      border: 2px dashed rgba(0, 255, 200, .70);
       border-radius: 20px;
-      background: rgba(0,0,0,.66);
+      background: rgba(0, 0, 0, .66);
       color: white;
       font-size: clamp(30px, 7vw, 94px);
       font-weight: 900;
       letter-spacing: -.06em;
-      text-shadow: 0 0 24px rgba(0,255,200,.50);
+      text-shadow: 0 0 24px rgba(0, 255, 200, .50);
       pointer-events: none;
     }
 
-    body.playlistHidden #playlist { display: none; }
-    body.playlistHidden #transport { right: 18px; }
+    body.playlistHidden #playlist {
+      display: none;
+    }
+
+    body.playlistHidden #transport {
+      right: 18px;
+    }
 
     @media (max-width: 840px) {
       #playlist {
@@ -375,7 +394,9 @@
         grid-template-columns: auto 1fr auto;
       }
 
-      #brand span { display: none; }
+      #brand span {
+        display: none;
+      }
 
       #track-title {
         bottom: 132px;
@@ -384,6 +405,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="app">
     <canvas id="avs-canvas" aria-label="WebVS Visualizer"></canvas>
@@ -543,7 +565,7 @@
             `}) || this
           } return e
         }(s.default); o.default = n
-      }, function (v, o, t) { o.__esModule = !0; var f = function () { function i() { } return i }(); o.default = f }, function (v, o, t) { o.__esModule = !0; var f = t(143), i = t(2), s = t(308), n = t(141), _ = t(3), e = { Main: f.default, Component: i.default, ShaderProgram: _.default, WebAudioAnalyser: s.default, AnalyserAdapter: n.default }; o.default = e }, function (v, o, t) { var f = this && this.__extends || function () { var F = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (U, j) { U.__proto__ = j } || function (U, j) { for (var L in j) j.hasOwnProperty(L) && (U[L] = j[L]) }; return function (U, j) { F(U, j); function L() { this.constructor = U } U.prototype = j === null ? Object.create(j) : (L.prototype = j.prototype, new L) } }(); o.__esModule = !0; var i = t(47), s = t(24), n = t(103), _ = t(207), e = t(208), r = t(209), a = t(210), u = t(273), l = t(274), d = t(76), c = t(275), E = t(277), h = t(278), g = t(279), P = t(280), A = t(281), O = t(283), M = t(285), R = t(286), y = t(296), I = t(300), C = t(301), x = t(302), X = t(303), H = t(304), z = t(305), G = t(0), Z = t(306), N = t(307), q = t(139), Q = function (F) { f(U, F); function U(j) { var L = F.call(this) || this; if (L.presetResourceKeys = [], G.checkRequiredOptions(j, ["canvas", "analyser"]), j = s.default(j, { showStat: !1 }), L.canvas = j.canvas, L.analyser = j.analyser, L.isStarted = !1, j.requestAnimationFrame && j.cancelAnimationFrame ? (L.requestAnimationFrame = j.requestAnimationFrame, L.cancelAnimationFrame = j.cancelAnimationFrame) : (L.requestAnimationFrame = window.requestAnimationFrame.bind(window), L.cancelAnimationFrame = window.cancelAnimationFrame.bind(window)), j.showStat) { var J = new _.default; J.setMode(0), J.domElement.style.position = "absolute", J.domElement.style.right = "5px", J.domElement.style.bottom = "5px", document.body.appendChild(J.domElement), L.stats = J } return L.meta = {}, L.buffers = {}, L._initComponentRegistry(), L._initResourceManager(j.resourcePrefix || ""), L._registerContextEvents(), L._initGl(), L._setupRoot({ id: "root" }), L } return U.prototype.start = function () { this.isStarted || (this.isStarted = !0, this.rsrcMan.ready && this._startAnimation()) }, U.prototype.stop = function () { this.isStarted && (this.isStarted = !1, this.rsrcMan.ready && this._stopAnimation()) }, U.prototype.loadPreset = function (j) { j = i.default(j), j.id = "root", this.rootComponent.destroy(), this.rsrcMan.clear(this.presetResourceKeys), "resources" in j && "uris" in j.resources ? (this.rsrcMan.registerUri(j.resources.uris), this.presetResourceKeys = Object.keys(j.resources.uris)) : this.presetResourceKeys = [], this.meta = i.default(j.meta), this._setupRoot(j) }, U.prototype.resetCanvas = function () { var j = this.rootComponent.toJSON(); this.rootComponent.destroy(), this.tempTSM.destroy(), this._initGl(), this._setupRoot(j) }, U.prototype.notifyResize = function () { var j = this.rctx.getGl(); j.viewport(0, 0, j.drawingBufferWidth, j.drawingBufferHeight), this.tempTSM.resize(), this.emit("resize", j.drawingBufferWidth, j.drawingBufferHeight) }, U.prototype.cacheBuffer = function (j, L) { this.buffers[j] = L }, U.prototype.getBuffer = function (j) { return this.buffers[j] }, U.prototype.get = function (j) { if (j === "meta") return this.meta }, U.prototype.toJSON = function () { var j = this.rootComponent.toJSON(); return j = n.default(j, "clearFrame", "components"), j.resources = this.rsrcMan.toJSON(), j.meta = i.default(this.meta), j }, U.prototype.destroy = function () { this.stop(), this.rootComponent.destroy(), this.rootComponent = null, this.copier.destroy(); for (var j in this.buffers) this.buffers.hasOwnProperty(j) && this.buffers[j].destroy(); if (this.tempTSM.destroy(), this.tempTSM = null, this.rctx.destroy(), this.rctx = null, this.stats) { var L = this.stats.domElement; L.parentNode.removeChild(L), this.stats = null } this.rsrcMan = null, this.stopListening(), this.canvas.removeEventListener("webglcontextlost", this.contextLostHander), this.canvas.removeEventListener("webglcontextrestored", this.contextRestoredHander) }, U.prototype.getRctx = function () { return this.rctx }, U.prototype.getRsrcMan = function () { return this.rsrcMan }, U.prototype.getCopier = function () { return this.copier }, U.prototype.getAnalyser = function () { return this.analyser }, U.prototype.getComponentRegistry = function () { return this.componentRegistry }, U.prototype.getTempTSM = function () { return this.tempTSM }, U.prototype.getRegisterBank = function () { return this.registerBank }, U.prototype.getBootTime = function () { return this.bootTime }, U.prototype.setAttribute = function (j, L, J) { return j === "meta" ? (this.meta = L, !0) : !1 }, U.prototype.handleRsrcWait = function () { this.isStarted && this._stopAnimation() }, U.prototype.handleRsrcReady = function () { this.isStarted && this._startAnimation() }, U.prototype._initComponentRegistry = function () { this.componentRegistry = new r.default([a.default, c.default, E.default, h.default, g.default, P.default, O.default, M.default, R.default, y.default, I.default, C.default, x.default, X.default, H.default, z.default, u.default, l.default]) }, U.prototype._initResourceManager = function (j) { var L = this, J = e.default; j && (J = i.default(J), J.prefix = j), this.rsrcMan = new A.default(J), this.listenTo(this.rsrcMan, "wait", function () { return L.handleRsrcWait() }), this.listenTo(this.rsrcMan, "ready", function () { return L.handleRsrcReady() }) }, U.prototype._registerContextEvents = function () { var j = this; this.contextLostHander = function (L) { L.preventDefault(), j.stop() }, this.canvas.addEventListener("webglcontextlost", this.contextLostHander), this.contextRestoredHander = function (L) { j.resetCanvas() }, this.canvas.addEventListener("webglcontextrestored", this.contextRestoredHander) }, U.prototype._initGl = function () { try { var j = this.canvas.getContext("webgl", { alpha: !1 }); if (!j) throw new Error("context is falsy"); this.rctx = new N.default(j), this.copier = new Z.default(this.rctx, !0), this.tempTSM = new q.default(this.rctx, this.copier, !0, 0) } catch (L) { throw new Error("Couldnt get webgl context" + L) } }, U.prototype._setupRoot = function (j) { this.registerBank = {}, this.bootTime = new Date().getTime(), this.rootComponent = new a.default(this, null, j) }, U.prototype._startAnimation = function () { var j = this, L = function () { j.analyser.update(), j.rootComponent.draw(), j.animReqId = j.requestAnimationFrame(L) }; if (this.stats) { var J = L; L = function () { j.stats.begin(), J(), j.stats.end() } } this.animReqId = this.requestAnimationFrame(L) }, U.prototype._stopAnimation = function () { this.cancelAnimationFrame(this.animReqId) }, U.version = "3.0.0", U }(d.default); o.default = Q }, function (v, o, t) { function f() { this.__data__ = [], this.size = 0 } o.a = f }, function (v, o, t) { var f = t(31), i = Array.prototype, s = i.splice; function n(_) { var e = this.__data__, r = Object(f.a)(e, _); if (r < 0) return !1; var a = e.length - 1; return r == a ? e.pop() : s.call(e, r, 1), --this.size, !0 } o.a = n }, function (v, o, t) { var f = t(31); function i(s) { var n = this.__data__, _ = Object(f.a)(n, s); return _ < 0 ? void 0 : n[_][1] } o.a = i }, function (v, o, t) { var f = t(31); function i(s) { return Object(f.a)(this.__data__, s) > -1 } o.a = i }, function (v, o, t) { var f = t(31); function i(s, n) { var _ = this.__data__, e = Object(f.a)(_, s); return e < 0 ? (++this.size, _.push([s, n])) : _[e][1] = n, this } o.a = i }, function (v, o, t) { var f = t(30); function i() { this.__data__ = new f.a, this.size = 0 } o.a = i }, function (v, o, t) { function f(i) { var s = this.__data__, n = s.delete(i); return this.size = s.size, n } o.a = f }, function (v, o, t) { function f(i) { return this.__data__.get(i) } o.a = f }, function (v, o, t) { function f(i) { return this.__data__.has(i) } o.a = f }, function (v, o, t) { var f = t(30), i = t(49), s = t(51), n = 200; function _(e, r) { var a = this.__data__; if (a instanceof f.a) { var u = a.__data__; if (!i.a || u.length < n - 1) return u.push([e, r]), this.size = ++a.size, this; a = this.__data__ = new s.a(u) } return a.set(e, r), this.size = a.size, this } o.a = _ }, function (v, o, t) { var f = t(50), i = t(157), s = t(6), n = t(88), _ = /[\\^$.*+?()[\]{}|]/g, e = /^\[object .+?Constructor\]$/, r = Function.prototype, a = Object.prototype, u = r.toString, l = a.hasOwnProperty, d = RegExp("^" + u.call(l).replace(_, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"); function c(E) { if (!Object(s.a)(E) || Object(i.a)(E)) return !1; var h = Object(f.default)(E) ? d : e; return h.test(Object(n.a)(E)) } o.a = c }, function (v, o, t) { var f = t(14), i = Object.prototype, s = i.hasOwnProperty, n = i.toString, _ = f.a ? f.a.toStringTag : void 0; function e(r) { var a = s.call(r, _), u = r[_]; try { r[_] = void 0; var l = !0 } catch { } var d = n.call(r); return l && (a ? r[_] = u : delete r[_]), d } o.a = e }, function (v, o, t) { var f = Object.prototype, i = f.toString; function s(n) { return i.call(n) } o.a = s }, function (v, o, t) { var f = t(158), i = function () { var n = /[^.]+$/.exec(f.a && f.a.keys && f.a.keys.IE_PROTO || ""); return n ? "Symbol(src)_1." + n : "" }(); function s(n) { return !!i && i in n } o.a = s }, function (v, o, t) { var f = t(4), i = f.a["__core-js_shared__"]; o.a = i }, function (v, o, t) { function f(i, s) { return i == null ? void 0 : i[s] } o.a = f }, function (v, o, t) { var f = t(161), i = t(30), s = t(49); function n() { this.size = 0, this.__data__ = { hash: new f.a, map: new (s.a || i.a), string: new f.a } } o.a = n }, function (v, o, t) { var f = t(162), i = t(163), s = t(164), n = t(165), _ = t(166); function e(r) { var a = -1, u = r == null ? 0 : r.length; for (this.clear(); ++a < u;) { var l = r[a]; this.set(l[0], l[1]) } } e.prototype.clear = f.a, e.prototype.delete = i.a, e.prototype.get = s.a, e.prototype.has = n.a, e.prototype.set = _.a, o.a = e }, function (v, o, t) { var f = t(32); function i() { this.__data__ = f.a ? Object(f.a)(null) : {}, this.size = 0 } o.a = i }, function (v, o, t) { function f(i) { var s = this.has(i) && delete this.__data__[i]; return this.size -= s ? 1 : 0, s } o.a = f }, function (v, o, t) { var f = t(32), i = "__lodash_hash_undefined__", s = Object.prototype, n = s.hasOwnProperty; function _(e) { var r = this.__data__; if (f.a) { var a = r[e]; return a === i ? void 0 : a } return n.call(r, e) ? r[e] : void 0 } o.a = _ }, function (v, o, t) { var f = t(32), i = Object.prototype, s = i.hasOwnProperty; function n(_) { var e = this.__data__; return f.a ? e[_] !== void 0 : s.call(e, _) } o.a = n }, function (v, o, t) { var f = t(32), i = "__lodash_hash_undefined__"; function s(n, _) { var e = this.__data__; return this.size += this.has(n) ? 0 : 1, e[n] = f.a && _ === void 0 ? i : _, this } o.a = s }, function (v, o, t) { var f = t(33); function i(s) { var n = Object(f.a)(this, s).delete(s); return this.size -= n ? 1 : 0, n } o.a = i }, function (v, o, t) { function f(i) { var s = typeof i; return s == "string" || s == "number" || s == "symbol" || s == "boolean" ? i !== "__proto__" : i === null } o.a = f }, function (v, o, t) { var f = t(33); function i(s) { return Object(f.a)(this, s).get(s) } o.a = i }, function (v, o, t) { var f = t(33); function i(s) { return Object(f.a)(this, s).has(s) } o.a = i }, function (v, o, t) { var f = t(33); function i(s, n) { var _ = Object(f.a)(this, s), e = _.size; return _.set(s, n), this.size += _.size == e ? 0 : 1, this } o.a = i }, function (v, o, t) { var f = t(15), i = t(11); function s(n, _) { return n && Object(f.a)(_, Object(i.default)(_), n) } o.a = s }, function (v, o, t) { var f = t(8), i = t(5), s = "[object Arguments]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { function f() { return !1 } o.a = f }, function (v, o, t) { var f = t(8), i = t(58), s = t(5), n = "[object Arguments]", _ = "[object Array]", e = "[object Boolean]", r = "[object Date]", a = "[object Error]", u = "[object Function]", l = "[object Map]", d = "[object Number]", c = "[object Object]", E = "[object RegExp]", h = "[object Set]", g = "[object String]", P = "[object WeakMap]", A = "[object ArrayBuffer]", O = "[object DataView]", M = "[object Float32Array]", R = "[object Float64Array]", y = "[object Int8Array]", I = "[object Int16Array]", C = "[object Int32Array]", x = "[object Uint8Array]", X = "[object Uint8ClampedArray]", H = "[object Uint16Array]", z = "[object Uint32Array]", G = {}; G[M] = G[R] = G[y] = G[I] = G[C] = G[x] = G[X] = G[H] = G[z] = !0, G[n] = G[_] = G[A] = G[e] = G[O] = G[r] = G[a] = G[u] = G[l] = G[d] = G[c] = G[E] = G[h] = G[g] = G[P] = !1; function Z(N) { return Object(s.a)(N) && Object(i.a)(N.length) && !!G[Object(f.a)(N)] } o.a = Z }, function (v, o, t) { var f = t(60), i = t(177), s = Object.prototype, n = s.hasOwnProperty; function _(e) { if (!Object(f.a)(e)) return Object(i.a)(e); var r = []; for (var a in Object(e)) n.call(e, a) && a != "constructor" && r.push(a); return r } o.a = _ }, function (v, o, t) { var f = t(93), i = Object(f.a)(Object.keys, Object); o.a = i }, function (v, o, t) { var f = t(15), i = t(34); function s(n, _) { return n && Object(f.a)(_, Object(i.a)(_), n) } o.a = s }, function (v, o, t) { var f = t(6), i = t(60), s = t(180), n = Object.prototype, _ = n.hasOwnProperty; function e(r) { if (!Object(f.a)(r)) return Object(s.a)(r); var a = Object(i.a)(r), u = []; for (var l in r) l == "constructor" && (a || !_.call(r, l)) || u.push(l); return u } o.a = e }, function (v, o, t) { function f(i) { var s = []; if (i != null) for (var n in Object(i)) s.push(n); return s } o.a = f }, function (v, o, t) { (function (f) { var i = t(4), s = ut && !ut.nodeType && ut, n = s && typeof f == "object" && f && !f.nodeType && f, _ = n && n.exports === s, e = _ ? i.a.Buffer : void 0, r = e ? e.allocUnsafe : void 0; function a(u, l) { if (l) return u.slice(); var d = u.length, c = r ? r(d) : new u.constructor(d); return u.copy(c), c } o.a = a }).call(o, t(57)(v)) }, function (v, o, t) { var f = t(15), i = t(62); function s(n, _) { return Object(f.a)(n, Object(i.a)(n), _) } o.a = s }, function (v, o, t) { var f = t(15), i = t(95); function s(n, _) { return Object(f.a)(n, Object(i.a)(n), _) } o.a = s }, function (v, o, t) { var f = t(10), i = t(4), s = Object(f.a)(i.a, "DataView"); o.a = s }, function (v, o, t) { var f = t(10), i = t(4), s = Object(f.a)(i.a, "Promise"); o.a = s }, function (v, o, t) { var f = Object.prototype, i = f.hasOwnProperty; function s(n) { var _ = n.length, e = new n.constructor(_); return _ && typeof n[0] == "string" && i.call(n, "index") && (e.index = n.index, e.input = n.input), e } o.a = s }, function (v, o, t) { var f = t(67), i = t(188), s = t(189), n = t(190), _ = t(191), e = "[object Boolean]", r = "[object Date]", a = "[object Map]", u = "[object Number]", l = "[object RegExp]", d = "[object Set]", c = "[object String]", E = "[object Symbol]", h = "[object ArrayBuffer]", g = "[object DataView]", P = "[object Float32Array]", A = "[object Float64Array]", O = "[object Int8Array]", M = "[object Int16Array]", R = "[object Int32Array]", y = "[object Uint8Array]", I = "[object Uint8ClampedArray]", C = "[object Uint16Array]", x = "[object Uint32Array]"; function X(H, z, G) { var Z = H.constructor; switch (z) { case h: return Object(f.a)(H); case e: case r: return new Z(+H); case g: return Object(i.a)(H, G); case P: case A: case O: case M: case R: case y: case I: case C: case x: return Object(_.a)(H, G); case a: return new Z; case u: case c: return new Z(H); case l: return Object(s.a)(H); case d: return new Z; case E: return Object(n.a)(H) } } o.a = X }, function (v, o, t) { var f = t(67); function i(s, n) { var _ = n ? Object(f.a)(s.buffer) : s.buffer; return new s.constructor(_, s.byteOffset, s.byteLength) } o.a = i }, function (v, o, t) { var f = /\w*$/; function i(s) { var n = new s.constructor(s.source, f.exec(s)); return n.lastIndex = s.lastIndex, n } o.a = i }, function (v, o, t) { var f = t(14), i = f.a ? f.a.prototype : void 0, s = i ? i.valueOf : void 0; function n(_) { return s ? Object(s.call(_)) : {} } o.a = n }, function (v, o, t) { var f = t(67); function i(s, n) { var _ = n ? Object(f.a)(s.buffer) : s.buffer; return new s.constructor(_, s.byteOffset, s.length) } o.a = i }, function (v, o, t) { var f = t(36), i = t(65), s = t(60); function n(_) { return typeof _.constructor == "function" && !Object(s.a)(_) ? Object(f.a)(Object(i.a)(_)) : {} } o.a = n }, function (v, o, t) { var f = t(194), i = t(16), s = t(59), n = s.a && s.a.isMap, _ = n ? Object(i.a)(n) : f.a; o.a = _ }, function (v, o, t) { var f = t(35), i = t(5), s = "[object Map]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { var f = t(196), i = t(16), s = t(59), n = s.a && s.a.isSet, _ = n ? Object(i.a)(n) : f.a; o.a = _ }, function (v, o, t) { var f = t(35), i = t(5), s = "[object Set]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { var f = t(198), i = t(90), s = t(18), n = i.a ? function (_, e) { return Object(i.a)(_, "toString", { configurable: !0, enumerable: !1, value: Object(f.a)(e), writable: !0 }) } : s.a; o.a = n }, function (v, o, t) { function f(i) { return function () { return i } } o.a = f }, function (v, o, t) { var f = t(104), i = t(106); function s(n, _) { return Object(f.a)(n, _, function (e, r) { return Object(i.a)(n, r) }) } o.a = s }, function (v, o, t) { var f = t(201), i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g, s = /\\(\\)?/g, n = Object(f.a)(function (_) { var e = []; return _.charCodeAt(0) === 46 && e.push(""), _.replace(i, function (r, a, u, l) { e.push(u ? l.replace(s, "$1") : a || r) }), e }); o.a = n }, function (v, o, t) { var f = t(202), i = 500; function s(n) { var _ = Object(f.a)(n, function (r) { return e.size === i && e.clear(), r }), e = _.cache; return _ } o.a = s }, function (v, o, t) { var f = t(51), i = "Expected a function"; function s(n, _) { if (typeof n != "function" || _ != null && typeof _ != "function") throw new TypeError(i); var e = function () { var r = arguments, a = _ ? _.apply(this, r) : r[0], u = e.cache; if (u.has(a)) return u.get(a); var l = n.apply(this, r); return e.cache = u.set(a, l) || u, l }; return e.cache = new (s.Cache || f.a), e } s.Cache = f.a, o.a = s }, function (v, o, t) { var f = t(14), i = t(7), s = t(1), n = t(25), _ = f.a ? f.a.prototype : void 0, e = _ ? _.toString : void 0; function r(a) { if (typeof a == "string") return a; if (Object(s.default)(a)) return Object(i.a)(a, r) + ""; if (Object(n.a)(a)) return e ? e.call(a) : ""; var u = a + ""; return u == "0" && 1 / a == -1 / 0 ? "-0" : u } o.a = r }, function (v, o, t) { var f = t(53), i = t(19), s = t(23), n = t(6), _ = t(20); function e(r, a, u, l) { if (!Object(n.a)(r)) return r; a = Object(i.a)(a, r); for (var d = -1, c = a.length, E = c - 1, h = r; h != null && ++d < c;) { var g = Object(_.a)(a[d]), P = u; if (d != E) { var A = h[g]; P = l ? l(A, g, h) : void 0, P === void 0 && (P = Object(n.a)(A) ? A : Object(s.a)(a[d + 1]) ? [] : {}) } Object(f.a)(h, g, P), h = h[g] } return r } o.a = e }, function (v, o, t) { function f(i, s) { return i != null && s in Object(i) } o.a = f }, function (v, o, t) { var f = t(14), i = t(55), s = t(1), n = f.a ? f.a.isConcatSpreadable : void 0; function _(e) { return Object(s.default)(e) || Object(i.a)(e) || !!(n && e && e[n]) } o.a = _ }, function (v, o, t) { (function (f, i) { v.exports = i() })(this, function () { var f = function () { function i(c) { return _.appendChild(c.dom), c } function s(c) { for (var E = 0; E < _.children.length; E++)_.children[E].style.display = E === c ? "block" : "none"; n = c } var n = 0, _ = document.createElement("div"); _.style.cssText = "position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000", _.addEventListener("click", function (c) { c.preventDefault(), s(++n % _.children.length) }, !1); var e = (performance || Date).now(), r = e, a = 0, u = i(new f.Panel("FPS", "#0ff", "#002")), l = i(new f.Panel("MS", "#0f0", "#020")); if (self.performance && self.performance.memory) var d = i(new f.Panel("MB", "#f08", "#201")); return s(0), { REVISION: 16, dom: _, addPanel: i, showPanel: s, begin: function () { e = (performance || Date).now() }, end: function () { a++; var c = (performance || Date).now(); if (l.update(c - e, 200), c > r + 1e3 && (u.update(1e3 * a / (c - r), 100), r = c, a = 0, d)) { var E = performance.memory; d.update(E.usedJSHeapSize / 1048576, E.jsHeapSizeLimit / 1048576) } return c }, update: function () { e = this.end() }, domElement: _, setMode: s } }; return f.Panel = function (i, s, n) { var _ = 1 / 0, e = 0, r = Math.round, a = r(window.devicePixelRatio || 1), u = 80 * a, l = 48 * a, d = 3 * a, c = 2 * a, E = 3 * a, h = 15 * a, g = 74 * a, P = 30 * a, A = document.createElement("canvas"); A.width = u, A.height = l, A.style.cssText = "width:80px;height:48px"; var O = A.getContext("2d"); return O.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", O.textBaseline = "top", O.fillStyle = n, O.fillRect(0, 0, u, l), O.fillStyle = s, O.fillText(i, d, c), O.fillRect(E, h, g, P), O.fillStyle = n, O.globalAlpha = .9, O.fillRect(E, h, g, P), { dom: A, update: function (M, R) { _ = Math.min(_, M), e = Math.max(e, M), O.fillStyle = n, O.globalAlpha = 1, O.fillRect(0, 0, u, h), O.fillStyle = s, O.fillText(r(M) + " " + i + " (" + r(_) + "-" + r(e) + ")", d, c), O.drawImage(A, E + a, h, g - a, P, E, h, g - a, P), O.fillRect(E + g - a, h, a, P), O.fillStyle = n, O.globalAlpha = .9, O.fillRect(E + g - a, h, a, r((1 - M / R) * P)) } } }, f }) }, function (v, o, t) { o.__esModule = !0; var f = { fileNames: ["avsres_texer_circle_edgeonly_19x19.bmp", "avsres_texer_circle_edgeonly_29x29.bmp", "avsres_texer_circle_fade_13x13.bmp", "avsres_texer_circle_heavyblur_19x19.bmp", "avsres_texer_circle_heavyblur_21x21.bmp", "avsres_texer_circle_heavyblur_29x29.bmp", "avsres_texer_circle_sharp_09x09.bmp", "avsres_texer_circle_sharp_19x19.bmp", "avsres_texer_circle_slightblur_13x13.bmp", "avsres_texer_circle_slightblur_21x21.bmp", "avsres_texer_hexagon-h_blur_123x123.bmp", "avsres_texer_square_edgeonly_24x24.bmp", "avsres_texer_square_edgeonly_28x28.bmp", "avsres_texer_square_edgeonly_30x30.bmp", "avsres_texer_square_sharp_20x20.bmp", "avsres_texer_square_sharp_32x32.bmp", "avsres_texer_square_sharp_48x48.bmp", "avsres_texer_square_sharp_60x60.bmp", "avsres_texer_square_sharp_64x64.bmp", "avsres_texer_square_sharp_72x72.bmp", "avsres_texer_square_sharp_96x96.bmp", "avsres_texer_square_sharp_250x250.bmp"], name: "Builtin", prefix: "https://unpkg.com/webvs@3.0.0/resources/" }; o.default = f }, function (v, o, t) { o.__esModule = !0; var f = function () { function i(s) { this.components = {}, this.tags = [], s && this.addComponent(s) } return i.prototype.addComponent = function (s) { var n = this; Array.isArray(s) || (s = [s]), s.forEach(function (_) { var e = _.getComponentName(); if (e in n.components) throw new Error("Component " + e + " already exists in the registry"); n.components[e] = _, n.tags.indexOf(_.getComponentTag()) === -1 && n.tags.push(_.getComponentTag()) }) }, i.prototype.getComponentClass = function (s) { return this.components[s] }, i.prototype.getComponentClassesByTag = function (s) { var n = this; return Object.keys(this.components).map(function (_) { return n.components[_] }).filter(function (_) { return _.getComponentTag() === s }) }, i }(); o.default = f }, function (v, o, t) { var f = this && this.__extends || function () { var r = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (a, u) { a.__proto__ = u } || function (a, u) { for (var l in u) u.hasOwnProperty(l) && (a[l] = u[l]) }; return function (a, u) { r(a, u); function l() { this.constructor = a } a.prototype = u === null ? Object.create(u) : (l.prototype = u.prototype, new l) } }(); o.__esModule = !0; var i = t(211), s = t(28), n = t(139), _; (function (r) { r[r.REPLACE = 1] = "REPLACE", r[r.MAXIMUM = 2] = "MAXIMUM", r[r.AVERAGE = 3] = "AVERAGE", r[r.ADDITIVE = 4] = "ADDITIVE", r[r.SUBTRACTIVE1 = 5] = "SUBTRACTIVE1", r[r.SUBTRACTIVE2 = 6] = "SUBTRACTIVE2", r[r.MULTIPLY = 7] = "MULTIPLY", r[r.MULTIPLY2 = 8] = "MULTIPLY2", r[r.ADJUSTABLE = 9] = "ADJUSTABLE", r[r.ALPHA = 10] = "ALPHA", r[r.IGNORE = 11] = "IGNORE" })(_ = o.ELBlendMode || (o.ELBlendMode = {})); var e = function (r) { f(a, r); function a(u, l, d) { var c = r.call(this, u, l, d) || this; return c.inited = !1, c } return a.prototype.init = function () { var u = this; r.prototype.init.call(this); var l = new n.default(this.main.getRctx(), this.main.getCopier(), !this.parent); this.setTSM(l), this.updateCode(), this.updateBlendMode(this.opts.input, "input"), this.updateBlendMode(this.opts.output, "output"), this.frameCounter = 0, this.first = !0, this.listenTo(this.main, "resize", function () { return u.handleResize() }) }, a.prototype.draw = function () { var u = this.opts; if (!(u.enableOnBeat && (this.main.getAnalyser().isBeat() ? this.frameCounter = u.enableOnBeatFor : this.frameCounter > 0 && this.frameCounter--, this.frameCounter === 0)) && (this.code.beat = this.main.getAnalyser().isBeat() ? 1 : 0, this.code.enabled = 1, this.code.clear = u.clearFrame ? 1 : 0, this.inited || (this.inited = !0, this.code.init()), this.code.perFrame(), this.code.enabled !== 0)) { if (this.getTSM().setAsRenderTarget(), u.clearFrame || this.first || this.code.clear) { var l = this.main.getRctx().getGl(); l.clearColor(0, 0, 0, 1), l.clear(l.COLOR_BUFFER_BIT), this.first = !1 } if (this.input !== _.IGNORE) { var d = this.parent.getTSM().getCurrentTexture(); this.main.getCopier().run(this.getTSM(), { srcTexture: d }, this.input) } for (var c = 0, E = this.components; c < E.length; c++) { var h = E[c]; h.isEnabled() && h.draw() } this.getTSM().unsetAsRenderTarget(), this.output !== _.IGNORE && (this.parent ? this.main.getCopier().run(this.parent.getTSM(), { srcTexture: this.getTSM().getCurrentTexture() }, this.output) : this.main.getCopier().run(null, { srcTexture: this.getTSM().getCurrentTexture() })) } }, a.prototype.destroy = function () { r.prototype.destroy.call(this), this.getTSM() && this.getTSM().destroy() }, a.prototype.updateCode = function () { this.code = s.default(this.opts.code, ["init", "perFrame"]).codeInst, this.code.setup(this.main), this.inited = !1 }, a.prototype.updateBlendMode = function (u, l) { l === "input" ? this.input = _[u] : this.output = _[u] }, a.prototype.handleResize = function () { this.getTSM().resize(), this.code.updateDimVars(this.main.getRctx().getGl()) }, a.componentName = "EffectList", a.componentTag = "", a.defaultOptions = { clearFrame: !1, code: { init: "", perFrame: "" }, enableOnBeat: !1, enableOnBeatFor: 1, input: "IGNORE", output: "REPLACE" }, a.optUpdateHandlers = { code: "updateCode", input: "updateBlendMode", output: "updateBlendMode" }, a }(i.default); o.default = e }, function (v, o, t) { var f = this && this.__extends || function () { var e = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (r, a) { r.__proto__ = a } || function (r, a) { for (var u in a) a.hasOwnProperty(u) && (r[u] = a[u]) }; return function (r, a) { e(r, a); function u() { this.constructor = r } r.prototype = a === null ? Object.create(a) : (u.prototype = a.prototype, new u) } }(); o.__esModule = !0; var i = t(24), s = t(73), n = t(2), _ = function (e) { f(r, e); function r(a, u, l) { var d = e.call(this, a, u, l) || this; return delete d.opts.components, d } return r.prototype.getTSM = function () { return this.tsm }, r.prototype.init = function () { var a = []; if (this.opts.components) for (var u = 0, l = this.opts.components; u < l.length; u++) { var d = l[u], c = this.main.getComponentRegistry().getComponentClass(d.type); if (!c) { console.warn("Unknown ComponentClass: " + d.type + ". Skipping."); continue } var E = new c(this.main, this, d); a.push(E) } this.components = a, this.tsm = this.parent && this.parent.getTSM() }, r.prototype.destroy = function () { e.prototype.destroy.call(this); for (var a = 0, u = this.components; a < u.length; a++) { var l = u[a]; l.destroy() } }, r.prototype.addComponent = function (a, u, l) { u === void 0 && (u = this.components.length), l === void 0 && (l = {}); var d; if (a instanceof n.default) d = a, d.setParent(this); else { var c = this.main.getComponentRegistry().getComponentClass(a.type); if (!c) return console.warn("Unknown ComponentClass: " + a.type + "."), null; d = new c(this.main, this, a) } return this.components.splice(u, 0, d), l = i.default({ pos: u }, l), this.emit("addComponent", d, this, l), d }, r.prototype.detachComponent = function (a, u) { if (u === void 0 && (u = {}), s.default(a)) { var l = a, d = void 0; for (d = 0; d < this.components.length; d++)if (this.components[d].getId() === l) { a = d; break } if (d === this.components.length) return } var c = this.components[a]; return this.components.splice(a, 1), u = i.default({ pos: a }, u), this.emit("detachComponent", c, this, u), c }, r.prototype.findComponent = function (a) { for (var u = 0, l = this.components; u < l.length; u++) { var d = l[u]; if (d.getId() === a) return d } for (var c = 0, E = this.components; c < E.length; c++) { var h = E[c]; if (h instanceof r) { var g = h.findComponent(a); if (g) return g } } }, r.prototype.toJSON = function () { var a = e.prototype.toJSON.call(this); a.components = []; for (var u = 0, l = this.components; u < l.length; u++) { var d = l[u]; a.components.push(d.toJSON()) } return a }, r.prototype.setTSM = function (a) { this.tsm = a }, r }(n.default); o.default = _ }, function (v, o, t) { var f = t(48), i = t(109), s = t(216), n = t(218), _ = t(35), e = t(1), r = t(56), a = t(92), u = 1, l = "[object Arguments]", d = "[object Array]", c = "[object Object]", E = Object.prototype, h = E.hasOwnProperty; function g(P, A, O, M, R, y) { var I = Object(e.default)(P), C = Object(e.default)(A), x = I ? d : Object(_.a)(P), X = C ? d : Object(_.a)(A); x = x == l ? c : x, X = X == l ? c : X; var H = x == c, z = X == c, G = x == X; if (G && Object(r.a)(P)) { if (!Object(r.a)(A)) return !1; I = !0, H = !1 } if (G && !H) return y || (y = new f.a), I || Object(a.a)(P) ? Object(i.a)(P, A, O, M, R, y) : Object(s.a)(P, A, x, O, M, R, y); if (!(O & u)) { var Z = H && h.call(P, "__wrapped__"), N = z && h.call(A, "__wrapped__"); if (Z || N) { var q = Z ? P.value() : P, Q = N ? A.value() : A; return y || (y = new f.a), R(q, Q, O, M, y) } } return G ? (y || (y = new f.a), Object(n.a)(P, A, O, M, R, y)) : !1 } o.a = g }, function (v, o, t) { var f = "__lodash_hash_undefined__"; function i(s) { return this.__data__.set(s, f), this } o.a = i }, function (v, o, t) { function f(i) { return this.__data__.has(i) } o.a = f }, function (v, o, t) { function f(i, s) { for (var n = -1, _ = i == null ? 0 : i.length; ++n < _;)if (s(i[n], n, i)) return !0; return !1 } o.a = f }, function (v, o, t) { var f = t(14), i = t(100), s = t(22), n = t(109), _ = t(217), e = t(75), r = 1, a = 2, u = "[object Boolean]", l = "[object Date]", d = "[object Error]", c = "[object Map]", E = "[object Number]", h = "[object RegExp]", g = "[object Set]", P = "[object String]", A = "[object Symbol]", O = "[object ArrayBuffer]", M = "[object DataView]", R = f.a ? f.a.prototype : void 0, y = R ? R.valueOf : void 0; function I(C, x, X, H, z, G, Z) { switch (X) { case M: if (C.byteLength != x.byteLength || C.byteOffset != x.byteOffset) return !1; C = C.buffer, x = x.buffer; case O: return !(C.byteLength != x.byteLength || !G(new i.a(C), new i.a(x))); case u: case l: case E: return Object(s.a)(+C, +x); case d: return C.name == x.name && C.message == x.message; case h: case P: return C == x + ""; case c: var N = _.a; case g: var q = H & r; if (N || (N = e.a), C.size != x.size && !q) return !1; var Q = Z.get(C); if (Q) return Q == x; H |= a, Z.set(C, x); var F = Object(n.a)(N(C), N(x), H, z, G, Z); return Z.delete(C), F; case A: if (y) return y.call(C) == y.call(x) }return !1 } o.a = I }, function (v, o, t) { function f(i) { var s = -1, n = Array(i.size); return i.forEach(function (_, e) { n[++s] = [e, _] }), n } o.a = f }, function (v, o, t) { var f = t(96), i = 1, s = Object.prototype, n = s.hasOwnProperty; function _(e, r, a, u, l, d) { var c = a & i, E = Object(f.a)(e), h = E.length, g = Object(f.a)(r), P = g.length; if (h != P && !c) return !1; for (var A = h; A--;) { var O = E[A]; if (!(c ? O in r : n.call(r, O))) return !1 } var M = d.get(e); if (M && d.get(r)) return M == r; var R = !0; d.set(e, r), d.set(r, e); for (var y = c; ++A < h;) { O = E[A]; var I = e[O], C = r[O]; if (u) var x = c ? u(C, I, O, r, e, d) : u(I, C, O, e, r, d); if (!(x === void 0 ? I === C || l(I, C, a, u, d) : x)) { R = !1; break } y || (y = O == "constructor") } if (R && !y) { var X = e.constructor, H = r.constructor; X != H && "constructor" in e && "constructor" in r && !(typeof X == "function" && X instanceof X && typeof H == "function" && H instanceof H) && (R = !1) } return d.delete(e), d.delete(r), R } o.a = _ }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(7), i = t(86), s = t(220), n = t(19), _ = t(15), e = t(222), r = t(72), a = t(66), u = 1, l = 2, d = 4, c = Object(r.a)(function (E, h) { var g = {}; if (E == null) return g; var P = !1; h = Object(f.a)(h, function (O) { return O = Object(n.a)(O, E), P || (P = O.length > 1), O }), Object(_.a)(E, Object(a.a)(E), g), P && (g = Object(i.a)(g, u | l | d, e.a)); for (var A = h.length; A--;)Object(s.a)(g, h[A]); return g }); o.default = c }, function (v, o, t) { var f = t(19), i = t(111), s = t(221), n = t(20); function _(e, r) { return r = Object(f.a)(r, e), e = Object(s.a)(e, r), e == null || delete e[Object(n.a)(Object(i.default)(r))] } o.a = _ }, function (v, o, t) { var f = t(37), i = t(41); function s(n, _) { return _.length < 2 ? n : Object(f.a)(n, Object(i.a)(_, 0, -1)) } o.a = s }, function (v, o, t) { var f = t(223); function i(s) { return Object(f.a)(s) ? void 0 : s } o.a = i }, function (v, o, t) { var f = t(8), i = t(65), s = t(5), n = "[object Object]", _ = Function.prototype, e = Object.prototype, r = _.toString, a = e.hasOwnProperty, u = r.call(Object); function l(d) { if (!Object(s.a)(d) || Object(f.a)(d) != n) return !1; var c = Object(i.a)(d); if (c === null) return !0; var E = a.call(c, "constructor") && c.constructor; return typeof E == "function" && E instanceof E && r.call(E) == u } o.a = l }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(105), i = 0; function s(n) { var _ = ++i; return Object(f.a)(n) + _ } o.default = s }, function (v, o, t) { var f = Object.prototype.hasOwnProperty, i = "~"; function s() { } Object.create && (s.prototype = Object.create(null), new s().__proto__ || (i = !1)); function n(a, u, l) { this.fn = a, this.context = u, this.once = l || !1 } function _(a, u, l, d, c) { if (typeof l != "function") throw new TypeError("The listener must be a function"); var E = new n(l, d || a, c), h = i ? i + u : u; return a._events[h] ? a._events[h].fn ? a._events[h] = [a._events[h], E] : a._events[h].push(E) : (a._events[h] = E, a._eventsCount++), a } function e(a, u) { --a._eventsCount === 0 ? a._events = new s : delete a._events[u] } function r() { this._events = new s, this._eventsCount = 0 } r.prototype.eventNames = function () { var u = [], l, d; if (this._eventsCount === 0) return u; for (d in l = this._events) f.call(l, d) && u.push(i ? d.slice(1) : d); return Object.getOwnPropertySymbols ? u.concat(Object.getOwnPropertySymbols(l)) : u }, r.prototype.listeners = function (u) { var l = i ? i + u : u, d = this._events[l]; if (!d) return []; if (d.fn) return [d.fn]; for (var c = 0, E = d.length, h = new Array(E); c < E; c++)h[c] = d[c].fn; return h }, r.prototype.listenerCount = function (u) { var l = i ? i + u : u, d = this._events[l]; return d ? d.fn ? 1 : d.length : 0 }, r.prototype.emit = function (u, l, d, c, E, h) { var g = i ? i + u : u; if (!this._events[g]) return !1; var P = this._events[g], A = arguments.length, O, M; if (P.fn) { switch (P.once && this.removeListener(u, P.fn, void 0, !0), A) { case 1: return P.fn.call(P.context), !0; case 2: return P.fn.call(P.context, l), !0; case 3: return P.fn.call(P.context, l, d), !0; case 4: return P.fn.call(P.context, l, d, c), !0; case 5: return P.fn.call(P.context, l, d, c, E), !0; case 6: return P.fn.call(P.context, l, d, c, E, h), !0 }for (M = 1, O = new Array(A - 1); M < A; M++)O[M - 1] = arguments[M]; P.fn.apply(P.context, O) } else { var R = P.length, y; for (M = 0; M < R; M++)switch (P[M].once && this.removeListener(u, P[M].fn, void 0, !0), A) { case 1: P[M].fn.call(P[M].context); break; case 2: P[M].fn.call(P[M].context, l); break; case 3: P[M].fn.call(P[M].context, l, d); break; case 4: P[M].fn.call(P[M].context, l, d, c); break; default: if (!O) for (y = 1, O = new Array(A - 1); y < A; y++)O[y - 1] = arguments[y]; P[M].fn.apply(P[M].context, O) } } return !0 }, r.prototype.on = function (u, l, d) { return _(this, u, l, d, !1) }, r.prototype.once = function (u, l, d) { return _(this, u, l, d, !0) }, r.prototype.removeListener = function (u, l, d, c) { var E = i ? i + u : u; if (!this._events[E]) return this; if (!l) return e(this, E), this; var h = this._events[E]; if (h.fn) h.fn === l && (!c || h.once) && (!d || h.context === d) && e(this, E); else { for (var g = 0, P = [], A = h.length; g < A; g++)(h[g].fn !== l || c && !h[g].once || d && h[g].context !== d) && P.push(h[g]); P.length ? this._events[E] = P.length === 1 ? P[0] : P : e(this, E) } return this }, r.prototype.removeAllListeners = function (u) { var l; return u ? (l = i ? i + u : u, this._events[l] && e(this, l)) : (this._events = new s, this._eventsCount = 0), this }, r.prototype.off = r.prototype.removeListener, r.prototype.addListener = r.prototype.on, r.prefixed = i, r.EventEmitter = r, v.exports = r }, function (v, o, t) { var f = t(42); function i(s, n) { var _ = []; return Object(f.a)(s, function (e, r, a) { n(e, r, a) && _.push(e) }), _ } o.a = i }, function (v, o, t) { var f = t(228), i = t(11); function s(n, _) { return n && Object(f.a)(n, _, i.default) } o.a = s }, function (v, o, t) { var f = t(229), i = Object(f.a)(); o.a = i }, function (v, o, t) { function f(i) { return function (s, n, _) { for (var e = -1, r = Object(s), a = _(s), u = a.length; u--;) { var l = a[i ? u : ++e]; if (n(r[l], l, r) === !1) break } return s } } o.a = f }, function (v, o, t) { var f = t(17); function i(s, n) { return function (_, e) { if (_ == null) return _; if (!Object(f.a)(_)) return s(_, e); for (var r = _.length, a = n ? r : -1, u = Object(_); (n ? a-- : ++a < r) && e(u[a], a, u) !== !1;); return _ } } o.a = i }, function (v, o, t) { var f = t(232), i = t(233), s = t(114); function n(_) { var e = Object(i.a)(_); return e.length == 1 && e[0][2] ? Object(s.a)(e[0][0], e[0][1]) : function (r) { return r === _ || Object(f.a)(r, _, e) } } o.a = n }, function (v, o, t) { var f = t(48), i = t(74), s = 1, n = 2; function _(e, r, a, u) { var l = a.length, d = l, c = !u; if (e == null) return !d; for (e = Object(e); l--;) { var E = a[l]; if (c && E[2] ? E[1] !== e[E[0]] : !(E[0] in e)) return !1 } for (; ++l < d;) { E = a[l]; var h = E[0], g = e[h], P = E[1]; if (c && E[2]) { if (g === void 0 && !(h in e)) return !1 } else { var A = new f.a; if (u) var O = u(g, P, h, e, r, A); if (!(O === void 0 ? Object(i.a)(P, g, s | n, u, A) : O)) return !1 } } return !0 } o.a = _ }, function (v, o, t) { var f = t(113), i = t(11); function s(n) { for (var _ = Object(i.default)(n), e = _.length; e--;) { var r = _[e], a = n[r]; _[e] = [r, a, Object(f.a)(a)] } return _ } o.a = s }, function (v, o, t) { var f = t(74), i = t(235), s = t(106), n = t(71), _ = t(113), e = t(114), r = t(20), a = 1, u = 2; function l(d, c) { return Object(n.a)(d) && Object(_.a)(c) ? Object(e.a)(Object(r.a)(d), c) : function (E) { var h = Object(i.a)(E, d); return h === void 0 && h === c ? Object(s.a)(E, d) : Object(f.a)(c, h, a | u) } } o.a = l }, function (v, o, t) { var f = t(37); function i(s, n, _) { var e = s == null ? void 0 : Object(f.a)(s, n); return e === void 0 ? _ : e } o.a = i }, function (v, o, t) { var f = t(115), i = t(237), s = t(71), n = t(20); function _(e) { return Object(s.a)(e) ? Object(f.a)(Object(n.a)(e)) : Object(i.a)(e) } o.a = _ }, function (v, o, t) { var f = t(37); function i(s) { return function (n) { return Object(f.a)(n, s) } } o.a = i }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(239), i = t(26), s = t(9), n = t(44), _ = Object(s.a)(function (e, r) { return Object(n.a)(e) ? Object(f.a)(e, Object(i.a)(r, 1, n.a, !0)) : [] }); o.default = _ }, function (v, o, t) { var f = t(39), i = t(43), s = t(77), n = t(7), _ = t(16), e = t(40), r = 200; function a(u, l, d, c) { var E = -1, h = i.a, g = !0, P = u.length, A = [], O = l.length; if (!P) return A; d && (l = Object(n.a)(l, Object(_.a)(d))), c ? (h = s.a, g = !1) : l.length >= r && (h = e.a, g = !1, l = new f.a(l)); t: for (; ++E < P;) { var M = u[E], R = d == null ? M : d(M); if (M = c || M !== 0 ? M : 0, g && R === R) { for (var y = O; y--;)if (l[y] === R) continue t; A.push(M) } else h(l, R, c) || A.push(M) } return A } o.a = a }, function (v, o, t) { function f(i, s, n, _) { for (var e = i.length, r = n + (_ ? 1 : -1); _ ? r-- : ++r < e;)if (s(i[r], r, i)) return r; return -1 } o.a = f }, function (v, o, t) { function f(i) { return i !== i } o.a = f }, function (v, o, t) { function f(i, s, n) { for (var _ = n - 1, e = i.length; ++_ < e;)if (i[_] === s) return _; return -1 } o.a = f }, function (v, o, t) { var f = t(52), i = t(42), s = t(117), n = t(1); function _(e, r) { var a = Object(n.default)(e) ? f.a : i.a; return a(e, Object(s.a)(r)) } o.a = _ }, function (v, o, t) { var f = t(78), i = t(72), s = t(80), n = t(121), _ = t(1), e = t(122), r = "Expected a function", a = 8, u = 32, l = 128, d = 256; function c(E) { return Object(i.a)(function (h) { var g = h.length, P = g, A = f.a.prototype.thru; for (E && h.reverse(); P--;) { var O = h[P]; if (typeof O != "function") throw new TypeError(r); if (A && !M && Object(n.a)(O) == "wrapper") var M = new f.a([], !0) } for (P = M ? P : g; ++P < g;) { O = h[P]; var R = Object(n.a)(O), y = R == "wrapper" ? Object(s.a)(O) : void 0; y && Object(e.a)(y[0]) && y[1] == (l | a | u | d) && !y[4].length && y[9] == 1 ? M = M[Object(n.a)(y[0])].apply(M, y[3]) : M = O.length == 1 && Object(e.a)(O) ? M[R]() : M.thru(O) } return function () { var I = arguments, C = I[0]; if (M && I.length == 1 && Object(_.default)(C)) return M.plant(C).value(); for (var x = 0, X = g ? h[x].apply(this, I) : C; ++x < g;)X = h[x].call(this, X); return X } }) } o.a = c }, function (v, o, t) { var f = {}; o.a = f }, function (v, o, t) { var f = t(81), i = t(78), s = t(79), n = t(1), _ = t(5), e = t(247), r = Object.prototype, a = r.hasOwnProperty; function u(l) { if (Object(_.a)(l) && !Object(n.default)(l) && !(l instanceof f.a)) { if (l instanceof i.a) return l; if (a.call(l, "__wrapped__")) return Object(e.a)(l) } return new i.a(l) } u.prototype = s.a.prototype, u.prototype.constructor = u, o.a = u }, function (v, o, t) { var f = t(81), i = t(78), s = t(61); function n(_) { if (_ instanceof f.a) return _.clone(); var e = new i.a(_.__wrapped__, _.__chain__); return e.__actions__ = Object(s.a)(_.__actions__), e.__index__ = _.__index__, e.__values__ = _.__values__, e } o.a = n }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(7), i = t(249), s = t(9), n = t(250), _ = Object(s.a)(function (e) { var r = Object(f.a)(e, n.a); return r.length && r[0] === e[0] ? Object(i.a)(r) : [] }); o.default = _ }, function (v, o, t) { var f = t(39), i = t(43), s = t(77), n = t(7), _ = t(16), e = t(40), r = Math.min; function a(u, l, d) { for (var c = d ? s.a : i.a, E = u[0].length, h = u.length, g = h, P = Array(h), A = 1 / 0, O = []; g--;) { var M = u[g]; g && l && (M = Object(n.a)(M, Object(_.a)(l))), A = r(M.length, A), P[g] = !d && (l || E >= 120 && M.length >= 120) ? new f.a(g && M) : void 0 } M = u[0]; var R = -1, y = P[0]; t: for (; ++R < E && O.length < A;) { var I = M[R], C = l ? l(I) : I; if (I = d || I !== 0 ? I : 0, !(y ? Object(e.a)(y, C) : c(O, C, d))) { for (g = h; --g;) { var x = P[g]; if (!(x ? Object(e.a)(x, C) : c(u[g], C, d))) continue t } y && y.push(C), O.push(I) } } return O } o.a = a }, function (v, o, t) { var f = t(44); function i(s) { return Object(f.a)(s) ? s : [] } o.a = i }, function (v, o, t) { var f = t(126), i = t(252), s = t(253), n = t(127), _ = t(259), e = t(80), r = t(260), a = t(131), u = t(132), l = t(21), d = "Expected a function", c = 1, E = 2, h = 8, g = 16, P = 32, A = 64, O = Math.max; function M(R, y, I, C, x, X, H, z) { var G = y & E; if (!G && typeof R != "function") throw new TypeError(d); var Z = C ? C.length : 0; if (Z || (y &= -97, C = x = void 0), H = H === void 0 ? H : O(Object(l.a)(H), 0), z = z === void 0 ? z : Object(l.a)(z), Z -= x ? x.length : 0, y & A) { var N = C, q = x; C = x = void 0 } var Q = G ? void 0 : Object(e.a)(R), F = [R, y, I, C, x, N, q, X, H, z]; if (Q && Object(r.a)(F, Q), R = F[0], y = F[1], I = F[2], C = F[3], x = F[4], z = F[9] = F[9] === void 0 ? G ? 0 : R.length : O(F[9] - Z, 0), !z && y & (h | g) && (y &= -25), !y || y == c) var U = Object(i.a)(R, y, I); else y == h || y == g ? U = Object(s.a)(R, y, z) : (y == P || y == (c | P)) && !x.length ? U = Object(_.a)(R, y, I, C) : U = n.a.apply(void 0, F); var j = Q ? f.a : a.a; return Object(u.a)(j(U, F), R, y) } o.a = M }, function (v, o, t) { var f = t(45), i = t(4), s = 1; function n(_, e, r) { var a = e & s, u = Object(f.a)(_); function l() { var d = this && this !== i.a && this instanceof l ? u : _; return d.apply(a ? r : this, arguments) } return l } o.a = n }, function (v, o, t) { var f = t(68), i = t(45), s = t(127), n = t(130), _ = t(82), e = t(46), r = t(4); function a(u, l, d) { var c = Object(i.a)(u); function E() { for (var h = arguments.length, g = Array(h), P = h, A = Object(_.a)(E); P--;)g[P] = arguments[P]; var O = h < 3 && g[0] !== A && g[h - 1] !== A ? [] : Object(e.a)(g, A); if (h -= O.length, h < d) return Object(n.a)(u, l, s.a, E.placeholder, void 0, g, O, void 0, void 0, d - h); var M = this && this !== r.a && this instanceof E ? c : u; return Object(f.a)(M, this, g) } return E } o.a = a }, function (v, o, t) { function f(i, s) { for (var n = i.length, _ = 0; n--;)i[n] === s && ++_; return _ } o.a = f }, function (v, o, t) { var f = /\{\n\/\* \[wrapped with (.+)\] \*/, i = /,? & /; function s(n) { var _ = n.match(f); return _ ? _[1].split(i) : [] } o.a = s }, function (v, o, t) {
+      }, function (v, o, t) { o.__esModule = !0; var f = function () { function i() { } return i }(); o.default = f }, function (v, o, t) { o.__esModule = !0; var f = t(143), i = t(2), s = t(308), n = t(141), _ = t(3), e = { Main: f.default, Component: i.default, ShaderProgram: _.default, WebAudioAnalyser: s.default, AnalyserAdapter: n.default }; o.default = e }, function (v, o, t) { var f = this && this.__extends || function () { var F = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (U, j) { U.__proto__ = j } || function (U, j) { for (var L in j) j.hasOwnProperty(L) && (U[L] = j[L]) }; return function (U, j) { F(U, j); function L() { this.constructor = U } U.prototype = j === null ? Object.create(j) : (L.prototype = j.prototype, new L) } }(); o.__esModule = !0; var i = t(47), s = t(24), n = t(103), _ = t(207), e = t(208), r = t(209), a = t(210), u = t(273), l = t(274), d = t(76), c = t(275), E = t(277), h = t(278), g = t(279), P = t(280), A = t(281), O = t(283), M = t(285), R = t(286), y = t(296), I = t(300), C = t(301), x = t(302), X = t(303), H = t(304), z = t(305), G = t(0), Z = t(306), N = t(307), q = t(139), Q = function (F) { f(U, F); function U(j) { var L = F.call(this) || this; if (L.presetResourceKeys = [], G.checkRequiredOptions(j, ["canvas", "analyser"]), j = s.default(j, { showStat: !1 }), L.canvas = j.canvas, L.analyser = j.analyser, L.isStarted = !1, j.requestAnimationFrame && j.cancelAnimationFrame ? (L.requestAnimationFrame = j.requestAnimationFrame, L.cancelAnimationFrame = j.cancelAnimationFrame) : (L.requestAnimationFrame = window.requestAnimationFrame.bind(window), L.cancelAnimationFrame = window.cancelAnimationFrame.bind(window)), j.showStat) { var J = new _.default; J.setMode(0), J.domElement.style.position = "absolute", J.domElement.style.right = "5px", J.domElement.style.bottom = "5px", document.body.appendChild(J.domElement), L.stats = J } return L.meta = {}, L.buffers = {}, L._initComponentRegistry(), L._initResourceManager(j.resourcePrefix || ""), L._registerContextEvents(), L._initGl(), L._setupRoot({ id: "root" }), L } return U.prototype.start = function () { this.isStarted || (this.isStarted = !0, this.rsrcMan.ready && this._startAnimation()) }, U.prototype.stop = function () { this.isStarted && (this.isStarted = !1, this.rsrcMan.ready && this._stopAnimation()) }, U.prototype.loadPreset = function (j) { j = i.default(j), j.id = "root", this.rootComponent.destroy(), this.rsrcMan.clear(this.presetResourceKeys), "resources" in j && "uris" in j.resources ? (this.rsrcMan.registerUri(j.resources.uris), this.presetResourceKeys = Object.keys(j.resources.uris)) : this.presetResourceKeys = [], this.meta = i.default(j.meta), this._setupRoot(j) }, U.prototype.resetCanvas = function () { var j = this.rootComponent.toJSON(); this.rootComponent.destroy(), this.tempTSM.destroy(), this._initGl(), this._setupRoot(j) }, U.prototype.notifyResize = function () { var j = this.rctx.getGl(); j.viewport(0, 0, j.drawingBufferWidth, j.drawingBufferHeight), this.tempTSM.resize(), this.emit("resize", j.drawingBufferWidth, j.drawingBufferHeight) }, U.prototype.cacheBuffer = function (j, L) { this.buffers[j] = L }, U.prototype.getBuffer = function (j) { return this.buffers[j] }, U.prototype.get = function (j) { if (j === "meta") return this.meta }, U.prototype.toJSON = function () { var j = this.rootComponent.toJSON(); return j = n.default(j, "clearFrame", "components"), j.resources = this.rsrcMan.toJSON(), j.meta = i.default(this.meta), j }, U.prototype.destroy = function () { this.stop(), this.rootComponent.destroy(), this.rootComponent = null, this.copier.destroy(); for (var j in this.buffers) this.buffers.hasOwnProperty(j) && this.buffers[j].destroy(); if (this.tempTSM.destroy(), this.tempTSM = null, this.rctx.destroy(), this.rctx = null, this.stats) { var L = this.stats.domElement; L.parentNode.removeChild(L), this.stats = null } this.rsrcMan = null, this.stopListening(), this.canvas.removeEventListener("webglcontextlost", this.contextLostHander), this.canvas.removeEventListener("webglcontextrestored", this.contextRestoredHander) }, U.prototype.getRctx = function () { return this.rctx }, U.prototype.getRsrcMan = function () { return this.rsrcMan }, U.prototype.getCopier = function () { return this.copier }, U.prototype.getAnalyser = function () { return this.analyser }, U.prototype.getComponentRegistry = function () { return this.componentRegistry }, U.prototype.getTempTSM = function () { return this.tempTSM }, U.prototype.getRegisterBank = function () { return this.registerBank }, U.prototype.getBootTime = function () { return this.bootTime }, U.prototype.setAttribute = function (j, L, J) { return j === "meta" ? (this.meta = L, !0) : !1 }, U.prototype.handleRsrcWait = function () { this.isStarted && this._stopAnimation() }, U.prototype.handleRsrcReady = function () { this.isStarted && this._startAnimation() }, U.prototype._initComponentRegistry = function () { this.componentRegistry = new r.default([a.default, c.default, E.default, h.default, g.default, P.default, O.default, M.default, R.default, y.default, I.default, C.default, x.default, X.default, H.default, z.default, u.default, l.default]) }, U.prototype._initResourceManager = function (j) { var L = this, J = e.default; j && (J = i.default(J), J.prefix = j), this.rsrcMan = new A.default(J), this.listenTo(this.rsrcMan, "wait", function () { return L.handleRsrcWait() }), this.listenTo(this.rsrcMan, "ready", function () { return L.handleRsrcReady() }) }, U.prototype._registerContextEvents = function () { var j = this; this.contextLostHander = function (L) { L.preventDefault(), j.stop() }, this.canvas.addEventListener("webglcontextlost", this.contextLostHander), this.contextRestoredHander = function (L) { j.resetCanvas() }, this.canvas.addEventListener("webglcontextrestored", this.contextRestoredHander) }, U.prototype._initGl = function () { try { var j = this.canvas.getContext("webgl", { alpha: !1 }); if (!j) throw new Error("context is falsy"); this.rctx = new N.default(j), this.copier = new Z.default(this.rctx, !0), this.tempTSM = new q.default(this.rctx, this.copier, !0, 0) } catch (L) { throw new Error("Couldnt get webgl context" + L) } }, U.prototype._setupRoot = function (j) { this.registerBank = {}, this.bootTime = new Date().getTime(), this.rootComponent = new a.default(this, null, j) }, U.prototype._startAnimation = function () { var j = this, L = function () { j.analyser.update(), j.rootComponent.draw(), j.animReqId = j.requestAnimationFrame(L) }; if (this.stats) { var J = L; L = function () { j.stats.begin(), J(), j.stats.end() } } this.animReqId = this.requestAnimationFrame(L) }, U.prototype._stopAnimation = function () { this.cancelAnimationFrame(this.animReqId) }, U.version = "3.0.0", U }(d.default); o.default = Q }, function (v, o, t) { function f() { this.__data__ = [], this.size = 0 } o.a = f }, function (v, o, t) { var f = t(31), i = Array.prototype, s = i.splice; function n(_) { var e = this.__data__, r = Object(f.a)(e, _); if (r < 0) return !1; var a = e.length - 1; return r == a ? e.pop() : s.call(e, r, 1), --this.size, !0 } o.a = n }, function (v, o, t) { var f = t(31); function i(s) { var n = this.__data__, _ = Object(f.a)(n, s); return _ < 0 ? void 0 : n[_][1] } o.a = i }, function (v, o, t) { var f = t(31); function i(s) { return Object(f.a)(this.__data__, s) > -1 } o.a = i }, function (v, o, t) { var f = t(31); function i(s, n) { var _ = this.__data__, e = Object(f.a)(_, s); return e < 0 ? (++this.size, _.push([s, n])) : _[e][1] = n, this } o.a = i }, function (v, o, t) { var f = t(30); function i() { this.__data__ = new f.a, this.size = 0 } o.a = i }, function (v, o, t) { function f(i) { var s = this.__data__, n = s.delete(i); return this.size = s.size, n } o.a = f }, function (v, o, t) { function f(i) { return this.__data__.get(i) } o.a = f }, function (v, o, t) { function f(i) { return this.__data__.has(i) } o.a = f }, function (v, o, t) { var f = t(30), i = t(49), s = t(51), n = 200; function _(e, r) { var a = this.__data__; if (a instanceof f.a) { var u = a.__data__; if (!i.a || u.length < n - 1) return u.push([e, r]), this.size = ++a.size, this; a = this.__data__ = new s.a(u) } return a.set(e, r), this.size = a.size, this } o.a = _ }, function (v, o, t) { var f = t(50), i = t(157), s = t(6), n = t(88), _ = /[\\^$.*+?()[\]{}|]/g, e = /^\[object .+?Constructor\]$/, r = Function.prototype, a = Object.prototype, u = r.toString, l = a.hasOwnProperty, d = RegExp("^" + u.call(l).replace(_, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"); function c(E) { if (!Object(s.a)(E) || Object(i.a)(E)) return !1; var h = Object(f.default)(E) ? d : e; return h.test(Object(n.a)(E)) } o.a = c }, function (v, o, t) { var f = t(14), i = Object.prototype, s = i.hasOwnProperty, n = i.toString, _ = f.a ? f.a.toStringTag : void 0; function e(r) { var a = s.call(r, _), u = r[_]; try { r[_] = void 0; var l = !0 } catch { } var d = n.call(r); return l && (a ? r[_] = u : delete r[_]), d } o.a = e }, function (v, o, t) { var f = Object.prototype, i = f.toString; function s(n) { return i.call(n) } o.a = s }, function (v, o, t) { var f = t(158), i = function () { var n = /[^.]+$/.exec(f.a && f.a.keys && f.a.keys.IE_PROTO || ""); return n ? "Symbol(src)_1." + n : "" }(); function s(n) { return !!i && i in n } o.a = s }, function (v, o, t) { var f = t(4), i = f.a["__core-js_shared__"]; o.a = i }, function (v, o, t) { function f(i, s) { return i == null ? void 0 : i[s] } o.a = f }, function (v, o, t) { var f = t(161), i = t(30), s = t(49); function n() { this.size = 0, this.__data__ = { hash: new f.a, map: new (s.a || i.a), string: new f.a } } o.a = n }, function (v, o, t) { var f = t(162), i = t(163), s = t(164), n = t(165), _ = t(166); function e(r) { var a = -1, u = r == null ? 0 : r.length; for (this.clear(); ++a < u;) { var l = r[a]; this.set(l[0], l[1]) } } e.prototype.clear = f.a, e.prototype.delete = i.a, e.prototype.get = s.a, e.prototype.has = n.a, e.prototype.set = _.a, o.a = e }, function (v, o, t) { var f = t(32); function i() { this.__data__ = f.a ? Object(f.a)(null) : {}, this.size = 0 } o.a = i }, function (v, o, t) { function f(i) { var s = this.has(i) && delete this.__data__[i]; return this.size -= s ? 1 : 0, s } o.a = f }, function (v, o, t) { var f = t(32), i = "__lodash_hash_undefined__", s = Object.prototype, n = s.hasOwnProperty; function _(e) { var r = this.__data__; if (f.a) { var a = r[e]; return a === i ? void 0 : a } return n.call(r, e) ? r[e] : void 0 } o.a = _ }, function (v, o, t) { var f = t(32), i = Object.prototype, s = i.hasOwnProperty; function n(_) { var e = this.__data__; return f.a ? e[_] !== void 0 : s.call(e, _) } o.a = n }, function (v, o, t) { var f = t(32), i = "__lodash_hash_undefined__"; function s(n, _) { var e = this.__data__; return this.size += this.has(n) ? 0 : 1, e[n] = f.a && _ === void 0 ? i : _, this } o.a = s }, function (v, o, t) { var f = t(33); function i(s) { var n = Object(f.a)(this, s).delete(s); return this.size -= n ? 1 : 0, n } o.a = i }, function (v, o, t) { function f(i) { var s = typeof i; return s == "string" || s == "number" || s == "symbol" || s == "boolean" ? i !== "__proto__" : i === null } o.a = f }, function (v, o, t) { var f = t(33); function i(s) { return Object(f.a)(this, s).get(s) } o.a = i }, function (v, o, t) { var f = t(33); function i(s) { return Object(f.a)(this, s).has(s) } o.a = i }, function (v, o, t) { var f = t(33); function i(s, n) { var _ = Object(f.a)(this, s), e = _.size; return _.set(s, n), this.size += _.size == e ? 0 : 1, this } o.a = i }, function (v, o, t) { var f = t(15), i = t(11); function s(n, _) { return n && Object(f.a)(_, Object(i.default)(_), n) } o.a = s }, function (v, o, t) { var f = t(8), i = t(5), s = "[object Arguments]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { function f() { return !1 } o.a = f }, function (v, o, t) { var f = t(8), i = t(58), s = t(5), n = "[object Arguments]", _ = "[object Array]", e = "[object Boolean]", r = "[object Date]", a = "[object Error]", u = "[object Function]", l = "[object Map]", d = "[object Number]", c = "[object Object]", E = "[object RegExp]", h = "[object Set]", g = "[object String]", P = "[object WeakMap]", A = "[object ArrayBuffer]", O = "[object DataView]", M = "[object Float32Array]", R = "[object Float64Array]", y = "[object Int8Array]", I = "[object Int16Array]", C = "[object Int32Array]", x = "[object Uint8Array]", X = "[object Uint8ClampedArray]", H = "[object Uint16Array]", z = "[object Uint32Array]", G = {}; G[M] = G[R] = G[y] = G[I] = G[C] = G[x] = G[X] = G[H] = G[z] = !0, G[n] = G[_] = G[A] = G[e] = G[O] = G[r] = G[a] = G[u] = G[l] = G[d] = G[c] = G[E] = G[h] = G[g] = G[P] = !1; function Z(N) { return Object(s.a)(N) && Object(i.a)(N.length) && !!G[Object(f.a)(N)] } o.a = Z }, function (v, o, t) { var f = t(60), i = t(177), s = Object.prototype, n = s.hasOwnProperty; function _(e) { if (!Object(f.a)(e)) return Object(i.a)(e); var r = []; for (var a in Object(e)) n.call(e, a) && a != "constructor" && r.push(a); return r } o.a = _ }, function (v, o, t) { var f = t(93), i = Object(f.a)(Object.keys, Object); o.a = i }, function (v, o, t) { var f = t(15), i = t(34); function s(n, _) { return n && Object(f.a)(_, Object(i.a)(_), n) } o.a = s }, function (v, o, t) { var f = t(6), i = t(60), s = t(180), n = Object.prototype, _ = n.hasOwnProperty; function e(r) { if (!Object(f.a)(r)) return Object(s.a)(r); var a = Object(i.a)(r), u = []; for (var l in r) l == "constructor" && (a || !_.call(r, l)) || u.push(l); return u } o.a = e }, function (v, o, t) { function f(i) { var s = []; if (i != null) for (var n in Object(i)) s.push(n); return s } o.a = f }, function (v, o, t) { (function (f) { var i = t(4), s = ut && !ut.nodeType && ut, n = s && typeof f == "object" && f && !f.nodeType && f, _ = n && n.exports === s, e = _ ? i.a.Buffer : void 0, r = e ? e.allocUnsafe : void 0; function a(u, l) { if (l) return u.slice(); var d = u.length, c = r ? r(d) : new u.constructor(d); return u.copy(c), c } o.a = a }).call(o, t(57)(v)) }, function (v, o, t) { var f = t(15), i = t(62); function s(n, _) { return Object(f.a)(n, Object(i.a)(n), _) } o.a = s }, function (v, o, t) { var f = t(15), i = t(95); function s(n, _) { return Object(f.a)(n, Object(i.a)(n), _) } o.a = s }, function (v, o, t) { var f = t(10), i = t(4), s = Object(f.a)(i.a, "DataView"); o.a = s }, function (v, o, t) { var f = t(10), i = t(4), s = Object(f.a)(i.a, "Promise"); o.a = s }, function (v, o, t) { var f = Object.prototype, i = f.hasOwnProperty; function s(n) { var _ = n.length, e = new n.constructor(_); return _ && typeof n[0] == "string" && i.call(n, "index") && (e.index = n.index, e.input = n.input), e } o.a = s }, function (v, o, t) { var f = t(67), i = t(188), s = t(189), n = t(190), _ = t(191), e = "[object Boolean]", r = "[object Date]", a = "[object Map]", u = "[object Number]", l = "[object RegExp]", d = "[object Set]", c = "[object String]", E = "[object Symbol]", h = "[object ArrayBuffer]", g = "[object DataView]", P = "[object Float32Array]", A = "[object Float64Array]", O = "[object Int8Array]", M = "[object Int16Array]", R = "[object Int32Array]", y = "[object Uint8Array]", I = "[object Uint8ClampedArray]", C = "[object Uint16Array]", x = "[object Uint32Array]"; function X(H, z, G) { var Z = H.constructor; switch (z) { case h: return Object(f.a)(H); case e: case r: return new Z(+H); case g: return Object(i.a)(H, G); case P: case A: case O: case M: case R: case y: case I: case C: case x: return Object(_.a)(H, G); case a: return new Z; case u: case c: return new Z(H); case l: return Object(s.a)(H); case d: return new Z; case E: return Object(n.a)(H) } } o.a = X }, function (v, o, t) { var f = t(67); function i(s, n) { var _ = n ? Object(f.a)(s.buffer) : s.buffer; return new s.constructor(_, s.byteOffset, s.byteLength) } o.a = i }, function (v, o, t) { var f = /\w*$/; function i(s) { var n = new s.constructor(s.source, f.exec(s)); return n.lastIndex = s.lastIndex, n } o.a = i }, function (v, o, t) { var f = t(14), i = f.a ? f.a.prototype : void 0, s = i ? i.valueOf : void 0; function n(_) { return s ? Object(s.call(_)) : {} } o.a = n }, function (v, o, t) { var f = t(67); function i(s, n) { var _ = n ? Object(f.a)(s.buffer) : s.buffer; return new s.constructor(_, s.byteOffset, s.length) } o.a = i }, function (v, o, t) { var f = t(36), i = t(65), s = t(60); function n(_) { return typeof _.constructor == "function" && !Object(s.a)(_) ? Object(f.a)(Object(i.a)(_)) : {} } o.a = n }, function (v, o, t) { var f = t(194), i = t(16), s = t(59), n = s.a && s.a.isMap, _ = n ? Object(i.a)(n) : f.a; o.a = _ }, function (v, o, t) { var f = t(35), i = t(5), s = "[object Map]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { var f = t(196), i = t(16), s = t(59), n = s.a && s.a.isSet, _ = n ? Object(i.a)(n) : f.a; o.a = _ }, function (v, o, t) { var f = t(35), i = t(5), s = "[object Set]"; function n(_) { return Object(i.a)(_) && Object(f.a)(_) == s } o.a = n }, function (v, o, t) { var f = t(198), i = t(90), s = t(18), n = i.a ? function (_, e) { return Object(i.a)(_, "toString", { configurable: !0, enumerable: !1, value: Object(f.a)(e), writable: !0 }) } : s.a; o.a = n }, function (v, o, t) { function f(i) { return function () { return i } } o.a = f }, function (v, o, t) { var f = t(104), i = t(106); function s(n, _) { return Object(f.a)(n, _, function (e, r) { return Object(i.a)(n, r) }) } o.a = s }, function (v, o, t) { var f = t(201), i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g, s = /\\(\\)?/g, n = Object(f.a)(function (_) { var e = []; return _.charCodeAt(0) === 46 && e.push(""), _.replace(i, function (r, a, u, l) { e.push(u ? l.replace(s, "$1") : a || r) }), e }); o.a = n }, function (v, o, t) { var f = t(202), i = 500; function s(n) { var _ = Object(f.a)(n, function (r) { return e.size === i && e.clear(), r }), e = _.cache; return _ } o.a = s }, function (v, o, t) { var f = t(51), i = "Expected a function"; function s(n, _) { if (typeof n != "function" || _ != null && typeof _ != "function") throw new TypeError(i); var e = function () { var r = arguments, a = _ ? _.apply(this, r) : r[0], u = e.cache; if (u.has(a)) return u.get(a); var l = n.apply(this, r); return e.cache = u.set(a, l) || u, l }; return e.cache = new (s.Cache || f.a), e } s.Cache = f.a, o.a = s }, function (v, o, t) { var f = t(14), i = t(7), s = t(1), n = t(25), _ = f.a ? f.a.prototype : void 0, e = _ ? _.toString : void 0; function r(a) { if (typeof a == "string") return a; if (Object(s.default)(a)) return Object(i.a)(a, r) + ""; if (Object(n.a)(a)) return e ? e.call(a) : ""; var u = a + ""; return u == "0" && 1 / a == -1 / 0 ? "-0" : u } o.a = r }, function (v, o, t) { var f = t(53), i = t(19), s = t(23), n = t(6), _ = t(20); function e(r, a, u, l) { if (!Object(n.a)(r)) return r; a = Object(i.a)(a, r); for (var d = -1, c = a.length, E = c - 1, h = r; h != null && ++d < c;) { var g = Object(_.a)(a[d]), P = u; if (d != E) { var A = h[g]; P = l ? l(A, g, h) : void 0, P === void 0 && (P = Object(n.a)(A) ? A : Object(s.a)(a[d + 1]) ? [] : {}) } Object(f.a)(h, g, P), h = h[g] } return r } o.a = e }, function (v, o, t) { function f(i, s) { return i != null && s in Object(i) } o.a = f }, function (v, o, t) { var f = t(14), i = t(55), s = t(1), n = f.a ? f.a.isConcatSpreadable : void 0; function _(e) { return Object(s.default)(e) || Object(i.a)(e) || !!(n && e && e[n]) } o.a = _ }, function (v, o, t) { (function (f, i) { v.exports = i() })(this, function () { var f = function () { function i(c) { return _.appendChild(c.dom), c } function s(c) { for (var E = 0; E < _.children.length; E++)_.children[E].style.display = E === c ? "block" : "none"; n = c } var n = 0, _ = document.createElement("div"); _.style.cssText = "position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000", _.addEventListener("click", function (c) { c.preventDefault(), s(++n % _.children.length) }, !1); var e = (performance || Date).now(), r = e, a = 0, u = i(new f.Panel("FPS", "#0ff", "#002")), l = i(new f.Panel("MS", "#0f0", "#020")); if (self.performance && self.performance.memory) var d = i(new f.Panel("MB", "#f08", "#201")); return s(0), { REVISION: 16, dom: _, addPanel: i, showPanel: s, begin: function () { e = (performance || Date).now() }, end: function () { a++; var c = (performance || Date).now(); if (l.update(c - e, 200), c > r + 1e3 && (u.update(1e3 * a / (c - r), 100), r = c, a = 0, d)) { var E = performance.memory; d.update(E.usedJSHeapSize / 1048576, E.jsHeapSizeLimit / 1048576) } return c }, update: function () { e = this.end() }, domElement: _, setMode: s } }; return f.Panel = function (i, s, n) { var _ = 1 / 0, e = 0, r = Math.round, a = r(window.devicePixelRatio || 1), u = 80 * a, l = 48 * a, d = 3 * a, c = 2 * a, E = 3 * a, h = 15 * a, g = 74 * a, P = 30 * a, A = document.createElement("canvas"); A.width = u, A.height = l, A.style.cssText = "width:80px;height:48px"; var O = A.getContext("2d"); return O.font = "bold " + 9 * a + "px Helvetica,Arial,sans-serif", O.textBaseline = "top", O.fillStyle = n, O.fillRect(0, 0, u, l), O.fillStyle = s, O.fillText(i, d, c), O.fillRect(E, h, g, P), O.fillStyle = n, O.globalAlpha = .9, O.fillRect(E, h, g, P), { dom: A, update: function (M, R) { _ = Math.min(_, M), e = Math.max(e, M), O.fillStyle = n, O.globalAlpha = 1, O.fillRect(0, 0, u, h), O.fillStyle = s, O.fillText(r(M) + " " + i + " (" + r(_) + "-" + r(e) + ")", d, c), O.drawImage(A, E + a, h, g - a, P, E, h, g - a, P), O.fillRect(E + g - a, h, a, P), O.fillStyle = n, O.globalAlpha = .9, O.fillRect(E + g - a, h, a, r((1 - M / R) * P)) } } }, f }) }, function (v, o, t) { o.__esModule = !0; var f = { fileNames: ["avsres_texer_circle_edgeonly_19x19.bmp", "avsres_texer_circle_edgeonly_29x29.bmp", "avsres_texer_circle_fade_13x13.bmp", "avsres_texer_circle_heavyblur_19x19.bmp", "avsres_texer_circle_heavyblur_21x21.bmp", "avsres_texer_circle_heavyblur_29x29.bmp", "avsres_texer_circle_sharp_09x09.bmp", "avsres_texer_circle_sharp_19x19.bmp", "avsres_texer_circle_slightblur_13x13.bmp", "avsres_texer_circle_slightblur_21x21.bmp", "avsres_texer_hexagon-h_blur_123x123.bmp", "avsres_texer_square_edgeonly_24x24.bmp", "avsres_texer_square_edgeonly_28x28.bmp", "avsres_texer_square_edgeonly_30x30.bmp", "avsres_texer_square_sharp_20x20.bmp", "avsres_texer_square_sharp_32x32.bmp", "avsres_texer_square_sharp_48x48.bmp", "avsres_texer_square_sharp_60x60.bmp", "avsres_texer_square_sharp_64x64.bmp", "avsres_texer_square_sharp_72x72.bmp", "avsres_texer_square_sharp_96x96.bmp", "avsres_texer_square_sharp_250x250.bmp"], name: "Builtin", prefix: "https:///hoffmeister.li/WebAMP/webvs/resources/" }; o.default = f }, function (v, o, t) { o.__esModule = !0; var f = function () { function i(s) { this.components = {}, this.tags = [], s && this.addComponent(s) } return i.prototype.addComponent = function (s) { var n = this; Array.isArray(s) || (s = [s]), s.forEach(function (_) { var e = _.getComponentName(); if (e in n.components) throw new Error("Component " + e + " already exists in the registry"); n.components[e] = _, n.tags.indexOf(_.getComponentTag()) === -1 && n.tags.push(_.getComponentTag()) }) }, i.prototype.getComponentClass = function (s) { return this.components[s] }, i.prototype.getComponentClassesByTag = function (s) { var n = this; return Object.keys(this.components).map(function (_) { return n.components[_] }).filter(function (_) { return _.getComponentTag() === s }) }, i }(); o.default = f }, function (v, o, t) { var f = this && this.__extends || function () { var r = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (a, u) { a.__proto__ = u } || function (a, u) { for (var l in u) u.hasOwnProperty(l) && (a[l] = u[l]) }; return function (a, u) { r(a, u); function l() { this.constructor = a } a.prototype = u === null ? Object.create(u) : (l.prototype = u.prototype, new l) } }(); o.__esModule = !0; var i = t(211), s = t(28), n = t(139), _; (function (r) { r[r.REPLACE = 1] = "REPLACE", r[r.MAXIMUM = 2] = "MAXIMUM", r[r.AVERAGE = 3] = "AVERAGE", r[r.ADDITIVE = 4] = "ADDITIVE", r[r.SUBTRACTIVE1 = 5] = "SUBTRACTIVE1", r[r.SUBTRACTIVE2 = 6] = "SUBTRACTIVE2", r[r.MULTIPLY = 7] = "MULTIPLY", r[r.MULTIPLY2 = 8] = "MULTIPLY2", r[r.ADJUSTABLE = 9] = "ADJUSTABLE", r[r.ALPHA = 10] = "ALPHA", r[r.IGNORE = 11] = "IGNORE" })(_ = o.ELBlendMode || (o.ELBlendMode = {})); var e = function (r) { f(a, r); function a(u, l, d) { var c = r.call(this, u, l, d) || this; return c.inited = !1, c } return a.prototype.init = function () { var u = this; r.prototype.init.call(this); var l = new n.default(this.main.getRctx(), this.main.getCopier(), !this.parent); this.setTSM(l), this.updateCode(), this.updateBlendMode(this.opts.input, "input"), this.updateBlendMode(this.opts.output, "output"), this.frameCounter = 0, this.first = !0, this.listenTo(this.main, "resize", function () { return u.handleResize() }) }, a.prototype.draw = function () { var u = this.opts; if (!(u.enableOnBeat && (this.main.getAnalyser().isBeat() ? this.frameCounter = u.enableOnBeatFor : this.frameCounter > 0 && this.frameCounter--, this.frameCounter === 0)) && (this.code.beat = this.main.getAnalyser().isBeat() ? 1 : 0, this.code.enabled = 1, this.code.clear = u.clearFrame ? 1 : 0, this.inited || (this.inited = !0, this.code.init()), this.code.perFrame(), this.code.enabled !== 0)) { if (this.getTSM().setAsRenderTarget(), u.clearFrame || this.first || this.code.clear) { var l = this.main.getRctx().getGl(); l.clearColor(0, 0, 0, 1), l.clear(l.COLOR_BUFFER_BIT), this.first = !1 } if (this.input !== _.IGNORE) { var d = this.parent.getTSM().getCurrentTexture(); this.main.getCopier().run(this.getTSM(), { srcTexture: d }, this.input) } for (var c = 0, E = this.components; c < E.length; c++) { var h = E[c]; h.isEnabled() && h.draw() } this.getTSM().unsetAsRenderTarget(), this.output !== _.IGNORE && (this.parent ? this.main.getCopier().run(this.parent.getTSM(), { srcTexture: this.getTSM().getCurrentTexture() }, this.output) : this.main.getCopier().run(null, { srcTexture: this.getTSM().getCurrentTexture() })) } }, a.prototype.destroy = function () { r.prototype.destroy.call(this), this.getTSM() && this.getTSM().destroy() }, a.prototype.updateCode = function () { this.code = s.default(this.opts.code, ["init", "perFrame"]).codeInst, this.code.setup(this.main), this.inited = !1 }, a.prototype.updateBlendMode = function (u, l) { l === "input" ? this.input = _[u] : this.output = _[u] }, a.prototype.handleResize = function () { this.getTSM().resize(), this.code.updateDimVars(this.main.getRctx().getGl()) }, a.componentName = "EffectList", a.componentTag = "", a.defaultOptions = { clearFrame: !1, code: { init: "", perFrame: "" }, enableOnBeat: !1, enableOnBeatFor: 1, input: "IGNORE", output: "REPLACE" }, a.optUpdateHandlers = { code: "updateCode", input: "updateBlendMode", output: "updateBlendMode" }, a }(i.default); o.default = e }, function (v, o, t) { var f = this && this.__extends || function () { var e = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (r, a) { r.__proto__ = a } || function (r, a) { for (var u in a) a.hasOwnProperty(u) && (r[u] = a[u]) }; return function (r, a) { e(r, a); function u() { this.constructor = r } r.prototype = a === null ? Object.create(a) : (u.prototype = a.prototype, new u) } }(); o.__esModule = !0; var i = t(24), s = t(73), n = t(2), _ = function (e) { f(r, e); function r(a, u, l) { var d = e.call(this, a, u, l) || this; return delete d.opts.components, d } return r.prototype.getTSM = function () { return this.tsm }, r.prototype.init = function () { var a = []; if (this.opts.components) for (var u = 0, l = this.opts.components; u < l.length; u++) { var d = l[u], c = this.main.getComponentRegistry().getComponentClass(d.type); if (!c) { console.warn("Unknown ComponentClass: " + d.type + ". Skipping."); continue } var E = new c(this.main, this, d); a.push(E) } this.components = a, this.tsm = this.parent && this.parent.getTSM() }, r.prototype.destroy = function () { e.prototype.destroy.call(this); for (var a = 0, u = this.components; a < u.length; a++) { var l = u[a]; l.destroy() } }, r.prototype.addComponent = function (a, u, l) { u === void 0 && (u = this.components.length), l === void 0 && (l = {}); var d; if (a instanceof n.default) d = a, d.setParent(this); else { var c = this.main.getComponentRegistry().getComponentClass(a.type); if (!c) return console.warn("Unknown ComponentClass: " + a.type + "."), null; d = new c(this.main, this, a) } return this.components.splice(u, 0, d), l = i.default({ pos: u }, l), this.emit("addComponent", d, this, l), d }, r.prototype.detachComponent = function (a, u) { if (u === void 0 && (u = {}), s.default(a)) { var l = a, d = void 0; for (d = 0; d < this.components.length; d++)if (this.components[d].getId() === l) { a = d; break } if (d === this.components.length) return } var c = this.components[a]; return this.components.splice(a, 1), u = i.default({ pos: a }, u), this.emit("detachComponent", c, this, u), c }, r.prototype.findComponent = function (a) { for (var u = 0, l = this.components; u < l.length; u++) { var d = l[u]; if (d.getId() === a) return d } for (var c = 0, E = this.components; c < E.length; c++) { var h = E[c]; if (h instanceof r) { var g = h.findComponent(a); if (g) return g } } }, r.prototype.toJSON = function () { var a = e.prototype.toJSON.call(this); a.components = []; for (var u = 0, l = this.components; u < l.length; u++) { var d = l[u]; a.components.push(d.toJSON()) } return a }, r.prototype.setTSM = function (a) { this.tsm = a }, r }(n.default); o.default = _ }, function (v, o, t) { var f = t(48), i = t(109), s = t(216), n = t(218), _ = t(35), e = t(1), r = t(56), a = t(92), u = 1, l = "[object Arguments]", d = "[object Array]", c = "[object Object]", E = Object.prototype, h = E.hasOwnProperty; function g(P, A, O, M, R, y) { var I = Object(e.default)(P), C = Object(e.default)(A), x = I ? d : Object(_.a)(P), X = C ? d : Object(_.a)(A); x = x == l ? c : x, X = X == l ? c : X; var H = x == c, z = X == c, G = x == X; if (G && Object(r.a)(P)) { if (!Object(r.a)(A)) return !1; I = !0, H = !1 } if (G && !H) return y || (y = new f.a), I || Object(a.a)(P) ? Object(i.a)(P, A, O, M, R, y) : Object(s.a)(P, A, x, O, M, R, y); if (!(O & u)) { var Z = H && h.call(P, "__wrapped__"), N = z && h.call(A, "__wrapped__"); if (Z || N) { var q = Z ? P.value() : P, Q = N ? A.value() : A; return y || (y = new f.a), R(q, Q, O, M, y) } } return G ? (y || (y = new f.a), Object(n.a)(P, A, O, M, R, y)) : !1 } o.a = g }, function (v, o, t) { var f = "__lodash_hash_undefined__"; function i(s) { return this.__data__.set(s, f), this } o.a = i }, function (v, o, t) { function f(i) { return this.__data__.has(i) } o.a = f }, function (v, o, t) { function f(i, s) { for (var n = -1, _ = i == null ? 0 : i.length; ++n < _;)if (s(i[n], n, i)) return !0; return !1 } o.a = f }, function (v, o, t) { var f = t(14), i = t(100), s = t(22), n = t(109), _ = t(217), e = t(75), r = 1, a = 2, u = "[object Boolean]", l = "[object Date]", d = "[object Error]", c = "[object Map]", E = "[object Number]", h = "[object RegExp]", g = "[object Set]", P = "[object String]", A = "[object Symbol]", O = "[object ArrayBuffer]", M = "[object DataView]", R = f.a ? f.a.prototype : void 0, y = R ? R.valueOf : void 0; function I(C, x, X, H, z, G, Z) { switch (X) { case M: if (C.byteLength != x.byteLength || C.byteOffset != x.byteOffset) return !1; C = C.buffer, x = x.buffer; case O: return !(C.byteLength != x.byteLength || !G(new i.a(C), new i.a(x))); case u: case l: case E: return Object(s.a)(+C, +x); case d: return C.name == x.name && C.message == x.message; case h: case P: return C == x + ""; case c: var N = _.a; case g: var q = H & r; if (N || (N = e.a), C.size != x.size && !q) return !1; var Q = Z.get(C); if (Q) return Q == x; H |= a, Z.set(C, x); var F = Object(n.a)(N(C), N(x), H, z, G, Z); return Z.delete(C), F; case A: if (y) return y.call(C) == y.call(x) }return !1 } o.a = I }, function (v, o, t) { function f(i) { var s = -1, n = Array(i.size); return i.forEach(function (_, e) { n[++s] = [e, _] }), n } o.a = f }, function (v, o, t) { var f = t(96), i = 1, s = Object.prototype, n = s.hasOwnProperty; function _(e, r, a, u, l, d) { var c = a & i, E = Object(f.a)(e), h = E.length, g = Object(f.a)(r), P = g.length; if (h != P && !c) return !1; for (var A = h; A--;) { var O = E[A]; if (!(c ? O in r : n.call(r, O))) return !1 } var M = d.get(e); if (M && d.get(r)) return M == r; var R = !0; d.set(e, r), d.set(r, e); for (var y = c; ++A < h;) { O = E[A]; var I = e[O], C = r[O]; if (u) var x = c ? u(C, I, O, r, e, d) : u(I, C, O, e, r, d); if (!(x === void 0 ? I === C || l(I, C, a, u, d) : x)) { R = !1; break } y || (y = O == "constructor") } if (R && !y) { var X = e.constructor, H = r.constructor; X != H && "constructor" in e && "constructor" in r && !(typeof X == "function" && X instanceof X && typeof H == "function" && H instanceof H) && (R = !1) } return d.delete(e), d.delete(r), R } o.a = _ }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(7), i = t(86), s = t(220), n = t(19), _ = t(15), e = t(222), r = t(72), a = t(66), u = 1, l = 2, d = 4, c = Object(r.a)(function (E, h) { var g = {}; if (E == null) return g; var P = !1; h = Object(f.a)(h, function (O) { return O = Object(n.a)(O, E), P || (P = O.length > 1), O }), Object(_.a)(E, Object(a.a)(E), g), P && (g = Object(i.a)(g, u | l | d, e.a)); for (var A = h.length; A--;)Object(s.a)(g, h[A]); return g }); o.default = c }, function (v, o, t) { var f = t(19), i = t(111), s = t(221), n = t(20); function _(e, r) { return r = Object(f.a)(r, e), e = Object(s.a)(e, r), e == null || delete e[Object(n.a)(Object(i.default)(r))] } o.a = _ }, function (v, o, t) { var f = t(37), i = t(41); function s(n, _) { return _.length < 2 ? n : Object(f.a)(n, Object(i.a)(_, 0, -1)) } o.a = s }, function (v, o, t) { var f = t(223); function i(s) { return Object(f.a)(s) ? void 0 : s } o.a = i }, function (v, o, t) { var f = t(8), i = t(65), s = t(5), n = "[object Object]", _ = Function.prototype, e = Object.prototype, r = _.toString, a = e.hasOwnProperty, u = r.call(Object); function l(d) { if (!Object(s.a)(d) || Object(f.a)(d) != n) return !1; var c = Object(i.a)(d); if (c === null) return !0; var E = a.call(c, "constructor") && c.constructor; return typeof E == "function" && E instanceof E && r.call(E) == u } o.a = l }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(105), i = 0; function s(n) { var _ = ++i; return Object(f.a)(n) + _ } o.default = s }, function (v, o, t) { var f = Object.prototype.hasOwnProperty, i = "~"; function s() { } Object.create && (s.prototype = Object.create(null), new s().__proto__ || (i = !1)); function n(a, u, l) { this.fn = a, this.context = u, this.once = l || !1 } function _(a, u, l, d, c) { if (typeof l != "function") throw new TypeError("The listener must be a function"); var E = new n(l, d || a, c), h = i ? i + u : u; return a._events[h] ? a._events[h].fn ? a._events[h] = [a._events[h], E] : a._events[h].push(E) : (a._events[h] = E, a._eventsCount++), a } function e(a, u) { --a._eventsCount === 0 ? a._events = new s : delete a._events[u] } function r() { this._events = new s, this._eventsCount = 0 } r.prototype.eventNames = function () { var u = [], l, d; if (this._eventsCount === 0) return u; for (d in l = this._events) f.call(l, d) && u.push(i ? d.slice(1) : d); return Object.getOwnPropertySymbols ? u.concat(Object.getOwnPropertySymbols(l)) : u }, r.prototype.listeners = function (u) { var l = i ? i + u : u, d = this._events[l]; if (!d) return []; if (d.fn) return [d.fn]; for (var c = 0, E = d.length, h = new Array(E); c < E; c++)h[c] = d[c].fn; return h }, r.prototype.listenerCount = function (u) { var l = i ? i + u : u, d = this._events[l]; return d ? d.fn ? 1 : d.length : 0 }, r.prototype.emit = function (u, l, d, c, E, h) { var g = i ? i + u : u; if (!this._events[g]) return !1; var P = this._events[g], A = arguments.length, O, M; if (P.fn) { switch (P.once && this.removeListener(u, P.fn, void 0, !0), A) { case 1: return P.fn.call(P.context), !0; case 2: return P.fn.call(P.context, l), !0; case 3: return P.fn.call(P.context, l, d), !0; case 4: return P.fn.call(P.context, l, d, c), !0; case 5: return P.fn.call(P.context, l, d, c, E), !0; case 6: return P.fn.call(P.context, l, d, c, E, h), !0 }for (M = 1, O = new Array(A - 1); M < A; M++)O[M - 1] = arguments[M]; P.fn.apply(P.context, O) } else { var R = P.length, y; for (M = 0; M < R; M++)switch (P[M].once && this.removeListener(u, P[M].fn, void 0, !0), A) { case 1: P[M].fn.call(P[M].context); break; case 2: P[M].fn.call(P[M].context, l); break; case 3: P[M].fn.call(P[M].context, l, d); break; case 4: P[M].fn.call(P[M].context, l, d, c); break; default: if (!O) for (y = 1, O = new Array(A - 1); y < A; y++)O[y - 1] = arguments[y]; P[M].fn.apply(P[M].context, O) } } return !0 }, r.prototype.on = function (u, l, d) { return _(this, u, l, d, !1) }, r.prototype.once = function (u, l, d) { return _(this, u, l, d, !0) }, r.prototype.removeListener = function (u, l, d, c) { var E = i ? i + u : u; if (!this._events[E]) return this; if (!l) return e(this, E), this; var h = this._events[E]; if (h.fn) h.fn === l && (!c || h.once) && (!d || h.context === d) && e(this, E); else { for (var g = 0, P = [], A = h.length; g < A; g++)(h[g].fn !== l || c && !h[g].once || d && h[g].context !== d) && P.push(h[g]); P.length ? this._events[E] = P.length === 1 ? P[0] : P : e(this, E) } return this }, r.prototype.removeAllListeners = function (u) { var l; return u ? (l = i ? i + u : u, this._events[l] && e(this, l)) : (this._events = new s, this._eventsCount = 0), this }, r.prototype.off = r.prototype.removeListener, r.prototype.addListener = r.prototype.on, r.prefixed = i, r.EventEmitter = r, v.exports = r }, function (v, o, t) { var f = t(42); function i(s, n) { var _ = []; return Object(f.a)(s, function (e, r, a) { n(e, r, a) && _.push(e) }), _ } o.a = i }, function (v, o, t) { var f = t(228), i = t(11); function s(n, _) { return n && Object(f.a)(n, _, i.default) } o.a = s }, function (v, o, t) { var f = t(229), i = Object(f.a)(); o.a = i }, function (v, o, t) { function f(i) { return function (s, n, _) { for (var e = -1, r = Object(s), a = _(s), u = a.length; u--;) { var l = a[i ? u : ++e]; if (n(r[l], l, r) === !1) break } return s } } o.a = f }, function (v, o, t) { var f = t(17); function i(s, n) { return function (_, e) { if (_ == null) return _; if (!Object(f.a)(_)) return s(_, e); for (var r = _.length, a = n ? r : -1, u = Object(_); (n ? a-- : ++a < r) && e(u[a], a, u) !== !1;); return _ } } o.a = i }, function (v, o, t) { var f = t(232), i = t(233), s = t(114); function n(_) { var e = Object(i.a)(_); return e.length == 1 && e[0][2] ? Object(s.a)(e[0][0], e[0][1]) : function (r) { return r === _ || Object(f.a)(r, _, e) } } o.a = n }, function (v, o, t) { var f = t(48), i = t(74), s = 1, n = 2; function _(e, r, a, u) { var l = a.length, d = l, c = !u; if (e == null) return !d; for (e = Object(e); l--;) { var E = a[l]; if (c && E[2] ? E[1] !== e[E[0]] : !(E[0] in e)) return !1 } for (; ++l < d;) { E = a[l]; var h = E[0], g = e[h], P = E[1]; if (c && E[2]) { if (g === void 0 && !(h in e)) return !1 } else { var A = new f.a; if (u) var O = u(g, P, h, e, r, A); if (!(O === void 0 ? Object(i.a)(P, g, s | n, u, A) : O)) return !1 } } return !0 } o.a = _ }, function (v, o, t) { var f = t(113), i = t(11); function s(n) { for (var _ = Object(i.default)(n), e = _.length; e--;) { var r = _[e], a = n[r]; _[e] = [r, a, Object(f.a)(a)] } return _ } o.a = s }, function (v, o, t) { var f = t(74), i = t(235), s = t(106), n = t(71), _ = t(113), e = t(114), r = t(20), a = 1, u = 2; function l(d, c) { return Object(n.a)(d) && Object(_.a)(c) ? Object(e.a)(Object(r.a)(d), c) : function (E) { var h = Object(i.a)(E, d); return h === void 0 && h === c ? Object(s.a)(E, d) : Object(f.a)(c, h, a | u) } } o.a = l }, function (v, o, t) { var f = t(37); function i(s, n, _) { var e = s == null ? void 0 : Object(f.a)(s, n); return e === void 0 ? _ : e } o.a = i }, function (v, o, t) { var f = t(115), i = t(237), s = t(71), n = t(20); function _(e) { return Object(s.a)(e) ? Object(f.a)(Object(n.a)(e)) : Object(i.a)(e) } o.a = _ }, function (v, o, t) { var f = t(37); function i(s) { return function (n) { return Object(f.a)(n, s) } } o.a = i }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(239), i = t(26), s = t(9), n = t(44), _ = Object(s.a)(function (e, r) { return Object(n.a)(e) ? Object(f.a)(e, Object(i.a)(r, 1, n.a, !0)) : [] }); o.default = _ }, function (v, o, t) { var f = t(39), i = t(43), s = t(77), n = t(7), _ = t(16), e = t(40), r = 200; function a(u, l, d, c) { var E = -1, h = i.a, g = !0, P = u.length, A = [], O = l.length; if (!P) return A; d && (l = Object(n.a)(l, Object(_.a)(d))), c ? (h = s.a, g = !1) : l.length >= r && (h = e.a, g = !1, l = new f.a(l)); t: for (; ++E < P;) { var M = u[E], R = d == null ? M : d(M); if (M = c || M !== 0 ? M : 0, g && R === R) { for (var y = O; y--;)if (l[y] === R) continue t; A.push(M) } else h(l, R, c) || A.push(M) } return A } o.a = a }, function (v, o, t) { function f(i, s, n, _) { for (var e = i.length, r = n + (_ ? 1 : -1); _ ? r-- : ++r < e;)if (s(i[r], r, i)) return r; return -1 } o.a = f }, function (v, o, t) { function f(i) { return i !== i } o.a = f }, function (v, o, t) { function f(i, s, n) { for (var _ = n - 1, e = i.length; ++_ < e;)if (i[_] === s) return _; return -1 } o.a = f }, function (v, o, t) { var f = t(52), i = t(42), s = t(117), n = t(1); function _(e, r) { var a = Object(n.default)(e) ? f.a : i.a; return a(e, Object(s.a)(r)) } o.a = _ }, function (v, o, t) { var f = t(78), i = t(72), s = t(80), n = t(121), _ = t(1), e = t(122), r = "Expected a function", a = 8, u = 32, l = 128, d = 256; function c(E) { return Object(i.a)(function (h) { var g = h.length, P = g, A = f.a.prototype.thru; for (E && h.reverse(); P--;) { var O = h[P]; if (typeof O != "function") throw new TypeError(r); if (A && !M && Object(n.a)(O) == "wrapper") var M = new f.a([], !0) } for (P = M ? P : g; ++P < g;) { O = h[P]; var R = Object(n.a)(O), y = R == "wrapper" ? Object(s.a)(O) : void 0; y && Object(e.a)(y[0]) && y[1] == (l | a | u | d) && !y[4].length && y[9] == 1 ? M = M[Object(n.a)(y[0])].apply(M, y[3]) : M = O.length == 1 && Object(e.a)(O) ? M[R]() : M.thru(O) } return function () { var I = arguments, C = I[0]; if (M && I.length == 1 && Object(_.default)(C)) return M.plant(C).value(); for (var x = 0, X = g ? h[x].apply(this, I) : C; ++x < g;)X = h[x].call(this, X); return X } }) } o.a = c }, function (v, o, t) { var f = {}; o.a = f }, function (v, o, t) { var f = t(81), i = t(78), s = t(79), n = t(1), _ = t(5), e = t(247), r = Object.prototype, a = r.hasOwnProperty; function u(l) { if (Object(_.a)(l) && !Object(n.default)(l) && !(l instanceof f.a)) { if (l instanceof i.a) return l; if (a.call(l, "__wrapped__")) return Object(e.a)(l) } return new i.a(l) } u.prototype = s.a.prototype, u.prototype.constructor = u, o.a = u }, function (v, o, t) { var f = t(81), i = t(78), s = t(61); function n(_) { if (_ instanceof f.a) return _.clone(); var e = new i.a(_.__wrapped__, _.__chain__); return e.__actions__ = Object(s.a)(_.__actions__), e.__index__ = _.__index__, e.__values__ = _.__values__, e } o.a = n }, function (v, o, t) { Object.defineProperty(o, "__esModule", { value: !0 }); var f = t(7), i = t(249), s = t(9), n = t(250), _ = Object(s.a)(function (e) { var r = Object(f.a)(e, n.a); return r.length && r[0] === e[0] ? Object(i.a)(r) : [] }); o.default = _ }, function (v, o, t) { var f = t(39), i = t(43), s = t(77), n = t(7), _ = t(16), e = t(40), r = Math.min; function a(u, l, d) { for (var c = d ? s.a : i.a, E = u[0].length, h = u.length, g = h, P = Array(h), A = 1 / 0, O = []; g--;) { var M = u[g]; g && l && (M = Object(n.a)(M, Object(_.a)(l))), A = r(M.length, A), P[g] = !d && (l || E >= 120 && M.length >= 120) ? new f.a(g && M) : void 0 } M = u[0]; var R = -1, y = P[0]; t: for (; ++R < E && O.length < A;) { var I = M[R], C = l ? l(I) : I; if (I = d || I !== 0 ? I : 0, !(y ? Object(e.a)(y, C) : c(O, C, d))) { for (g = h; --g;) { var x = P[g]; if (!(x ? Object(e.a)(x, C) : c(u[g], C, d))) continue t } y && y.push(C), O.push(I) } } return O } o.a = a }, function (v, o, t) { var f = t(44); function i(s) { return Object(f.a)(s) ? s : [] } o.a = i }, function (v, o, t) { var f = t(126), i = t(252), s = t(253), n = t(127), _ = t(259), e = t(80), r = t(260), a = t(131), u = t(132), l = t(21), d = "Expected a function", c = 1, E = 2, h = 8, g = 16, P = 32, A = 64, O = Math.max; function M(R, y, I, C, x, X, H, z) { var G = y & E; if (!G && typeof R != "function") throw new TypeError(d); var Z = C ? C.length : 0; if (Z || (y &= -97, C = x = void 0), H = H === void 0 ? H : O(Object(l.a)(H), 0), z = z === void 0 ? z : Object(l.a)(z), Z -= x ? x.length : 0, y & A) { var N = C, q = x; C = x = void 0 } var Q = G ? void 0 : Object(e.a)(R), F = [R, y, I, C, x, N, q, X, H, z]; if (Q && Object(r.a)(F, Q), R = F[0], y = F[1], I = F[2], C = F[3], x = F[4], z = F[9] = F[9] === void 0 ? G ? 0 : R.length : O(F[9] - Z, 0), !z && y & (h | g) && (y &= -25), !y || y == c) var U = Object(i.a)(R, y, I); else y == h || y == g ? U = Object(s.a)(R, y, z) : (y == P || y == (c | P)) && !x.length ? U = Object(_.a)(R, y, I, C) : U = n.a.apply(void 0, F); var j = Q ? f.a : a.a; return Object(u.a)(j(U, F), R, y) } o.a = M }, function (v, o, t) { var f = t(45), i = t(4), s = 1; function n(_, e, r) { var a = e & s, u = Object(f.a)(_); function l() { var d = this && this !== i.a && this instanceof l ? u : _; return d.apply(a ? r : this, arguments) } return l } o.a = n }, function (v, o, t) { var f = t(68), i = t(45), s = t(127), n = t(130), _ = t(82), e = t(46), r = t(4); function a(u, l, d) { var c = Object(i.a)(u); function E() { for (var h = arguments.length, g = Array(h), P = h, A = Object(_.a)(E); P--;)g[P] = arguments[P]; var O = h < 3 && g[0] !== A && g[h - 1] !== A ? [] : Object(e.a)(g, A); if (h -= O.length, h < d) return Object(n.a)(u, l, s.a, E.placeholder, void 0, g, O, void 0, void 0, d - h); var M = this && this !== r.a && this instanceof E ? c : u; return Object(f.a)(M, this, g) } return E } o.a = a }, function (v, o, t) { function f(i, s) { for (var n = i.length, _ = 0; n--;)i[n] === s && ++_; return _ } o.a = f }, function (v, o, t) { var f = /\{\n\/\* \[wrapped with (.+)\] \*/, i = /,? & /; function s(n) { var _ = n.match(f); return _ ? _[1].split(i) : [] } o.a = s }, function (v, o, t) {
         var f = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/; function i(s, n) {
           var _ = n.length; if (!_) return s; var e = _ - 1; return n[e] = (_ > 1 ? "& " : "") + n[e], n = n.join(_ > 2 ? ", " : " "), s.replace(f, `{
 /* [wrapped with `+ n + `] */
@@ -558,7 +580,7 @@
         var f = this && this.__extends || function () { var r = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (a, u) { a.__proto__ = u } || function (a, u) { for (var l in u) u.hasOwnProperty(l) && (a[l] = u[l]) }; return function (a, u) { r(a, u); function l() { this.constructor = a } a.prototype = u === null ? Object.create(u) : (l.prototype = u.prototype, new l) } }(); o.__esModule = !0; var i = t(2), s = t(0), n = t(85), _ = t(3), e = function (r) {
           f(a, r); function a(u, l, d) { return r.call(this, u, l, d) || this } return a.prototype.init = function () {
             this.centerX = 0, this.centerY = 0, this.velocityX = 0, this.velocityY = 0, this.posX = 0, this.posY = 0, this.updateBlendMode(); var u = this.main.getRctx().getGl(); this.program = new _.default(this.main.getRctx(), {
-              bindings: { attribs: { points: { name: "a_points", drawMode: u.TRIANGLE_FAN } }, uniforms: { color: { name: "u_color", valueType: s.WebGLVarType._3FV }, position: { name: "u_position", valueType: s.WebGLVarType._2FV }, scale: { name: "u_scale", valueType: s.WebGLVarType._2FV } } }, copyOnSwap: !0, dynamicBlend: !0, fragmentShader: `
+              bindings: { attribs: { points: { name: "a_point", drawMode: u.TRIANGLE_FAN } }, uniforms: { color: { name: "u_color", valueType: s.WebGLVarType._3FV }, position: { name: "u_position", valueType: s.WebGLVarType._2FV }, scale: { name: "u_scale", valueType: s.WebGLVarType._2FV } } }, copyOnSwap: !0, dynamicBlend: !0, fragmentShader: `
                 uniform vec3 u_color;
                 void main() {
                    setFragColor(vec4(u_color, 1));
@@ -616,7 +638,7 @@
                     v_color = a_color;
                 }
             `}); this.program && this.program.destroy(), this.program = g
-          }, E.prototype.updateCode = function () { var h = e.default(this.opts.code, ["init", "onBeat", "perFrame", "perPoint"]).codeInst; h.n = 100, h.setup(this.main), this.inited = !1, this.code = [h] }, E.prototype.updateClones = function () { this.code = _.default.clone(this.code, this.opts.clone) }, E.prototype.updateColors = function () { this.colors = s.default(this.opts.colors, r.parseColorNorm), this.curColorId = 0 }, E.prototype.updateSpeed = function () { var h = this.maxStep; this.maxStep = Math.floor(1 / this.opts.cycleSpeed), this.curStep ? this.curStep = Math.floor(this.curStep / h * this.maxStep) : this.curStep = 0 }, E.prototype.updateChannel = function () { this.channel = r.Channels[this.opts.channel] }, E.prototype.updateSource = function () { this.source = r.Source[this.opts.source] }, E.prototype.updateDrawMode = function () { this.drawMode = l[this.opts.drawMode] }, E.prototype.updateThickness = function () { var h, g = this.main.getRctx().getGl(); this.drawMode === l.DOTS ? h = g.getParameter(g.ALIASED_POINT_SIZE_RANGE) : h = g.getParameter(g.ALIASED_LINE_WIDTH_RANGE), this.opts.thickness < h[0] || this.opts.thickness > h[1] ? this.veryThick = !0 : this.veryThick = !1 }, E.prototype._makeColor = function () { if (this.colors.length === 1) return this.colors[0]; for (var h = [0, 0, 0], g = this.colors[this.curColorId], P = this.colors[(this.curColorId + 1) % this.colors.length], A = this.curStep / this.maxStep, O = 0; O < 3; O++)h[O] = g[O] * (1 - A) + P[O] * A; return this.curStep = (this.curStep + 1) % this.maxStep, this.curStep === 0 && (this.curColorId = (this.curColorId + 1) % this.colors.length), h }, E.prototype.handleResize = function () { var h = this; i.default(this.code, function (g) { g.updateDimVars(h.main.getRctx().getGl()) }) }, E.componentName = "SuperScope", E.componentTag = "render", E.optUpdateHandlers = { blendMode: "updateProgram", channel: "updateChannel", clone: "updateClones", code: ["updateCode", "updateClones"], colors: "updateColors", cycleSpeed: "updateSpeed", drawMode: "updateDrawMode", source: "updateSource", thickness: "updateThickness" }, E.defaultOptions = { blendMode: "REPLACE", channel: "CENTER", clone: 1, code: { init: "n=800", onBeat: "", perFrame: "t=t-0.05", perPoint: "d=i+v*0.2; r=t+i*$PI*4; x=cos(r)*d; y=sin(r)*d" }, colors: ["#ffffff"], cycleSpeed: .01, drawMode: "LINES", source: "SPECTRUM", thickness: 1 }, E
+          }, E.prototype.updateCode = function () { var h = e.default(this.opts.code, ["init", "onBeat", "perFrame", "perPoint"]).codeInst; h.n = 100, h.setup(this.main), this.inited = !1, this.code = [h] }, E.prototype.updateClones = function () { this.code = _.default.clone(this.code, this.opts.clone) }, E.prototype.updateColors = function () { this.colors = s.default(this.opts.colors, r.parseColorNorm), this.curColorId = 0 }, E.prototype.updateSpeed = function () { var h = this.maxStep; this.maxStep = Math.floor(1 / this.opts.cycleSpeed), this.curStep ? this.curStep = Math.floor(this.curStep / h * this.maxStep) : this.curStep = 0 }, E.prototype.updateChannel = function () { this.channel = r.Channels[this.opts.channel] }, E.prototype.updateSource = function () { this.source = r.Source[this.opts.source] }, E.prototype.updateDrawMode = function () { this.drawMode = l[this.opts.drawMode] }, E.prototype.updateThickness = function () { var h, g = this.main.getRctx().getGl(); this.drawMode === l.DOTS ? h = g.getParameter(g.ALIASED_POINT_SIZE_RANGE) : h = g.getParameter(g.ALIASED_LINE_WIDTH_RANGE), this.opts.thickness < h[0] || this.opts.thickness > h[1] ? this.veryThick = !0 : this.veryThick = !1 }, E.prototype._makeColor = function () { if (this.colors.length === 1) return this.colors[0]; for (var h = [0, 0, 0], g = this.colors[this.curColorId], P = this.colors[(this.curColorId + 1) % this.colors.length], A = this.curStep / this.maxStep, O = 0; O < 3; O++)h[O] = g[O] * (1 - A) + P[O] * A; return this.curStep = (this.curStep + 1) % this.maxStep, this.curStep === 0 && (this.curColorId = (this.curColorId + 1) % this.colors.length), h }, E.prototype.handleResize = function () { var h = this; i.default(this.code, function (g) { g.updateDimVars(h.main.getRctx().getGl()) }) }, E.componentName = "SuperScope", E.componentTag = "render", E.optUpdateHandlers = { blendMode: "updateProgram", channel: "updateChannel", clone: "updateClones", code: ["updateCode", "updateClones"], colors: "updateColors", cycleSpeed: "updateSpeed", drawMode: "updateDrawMode", source: "updateSource", thickness: "updateThickness" }, E.defaultOptions = { blendMode: "REPLACE", channel: "CENTER", clone: 1, code: { init: "n=128", onBeat: "", perFrame: "t=t-0.05", perPoint: "d=i+v*0.2; r=t+i*$PI*4; x=cos(r)*d; y=sin(r)*d" }, colors: ["#ffffff"], cycleSpeed: .01, drawMode: "LINES", source: "SPECTRUM", thickness: 1 }, E
         }(n.default); o.default = d
       }, function (v, o, t) {
         var f = this && this.__extends || function () { var l = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, c) { d.__proto__ = c } || function (d, c) { for (var E in c) c.hasOwnProperty(E) && (d[E] = c[E]) }; return function (d, c) { l(d, c); function E() { this.constructor = d } d.prototype = c === null ? Object.create(c) : (E.prototype = c.prototype, new E) } }(); o.__esModule = !0; var i = t(12), s = t(2), n = t(84), _ = t(28), e = t(0), r = t(29), a = t(3), u = function (l) {
@@ -949,7 +971,7 @@
             `}) || this
           } return e
         }(s.default); o.default = n
-      }, function (v, o, t) { o.__esModule = !0; var f = function () { function i(s) { this.gl = s, this.buffers = {} } return i.prototype.getGl = function () { return this.gl }, i.prototype.cacheBuffer = function (s, n) { this.buffers[s] = n }, i.prototype.getBuffer = function (s) { return this.buffers[s] }, i.prototype.destroy = function () { for (var s in this.buffers) this.buffers.hasOwnProperty(s) && this.buffers[s].destroy() }, i }(); o.default = f }, function (v, o, t) { var f = this && this.__extends || function () { var e = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (r, a) { r.__proto__ = a } || function (r, a) { for (var u in a) a.hasOwnProperty(u) && (r[u] = a[u]) }; return function (r, a) { e(r, a); function u() { this.constructor = r } r.prototype = a === null ? Object.create(a) : (u.prototype = a.prototype, new u) } }(); o.__esModule = !0; var i = t(24), s = t(0), n = t(141), _ = function (e) { f(r, e); function r(a) { var u = e.call(this) || this; if (u.movingThreshold = 0, a = i.default(a || {}, { decay: .02, fftSize: 512, threshold: .125 }), a.context) u.context = a.context; else if (window.webkitAudioContext) u.context = new window.webkitAudioContext; else if (window.AudioContext) u.context = new window.AudioContext; else throw new Error("Cannot create webaudio context"); u.fftSize = a.fftSize, u.threshold = a.threshold, u.decay = a.decay, u.visData = [null, null, null]; for (var l = 0; l < 3; l++) { var d = new Float32Array(u.fftSize / 2), c = new Float32Array(u.fftSize); u.visData[l] = { spectrum: d, waveform: c } } return u } return r.prototype.connectToNode = function (a) { this.source = a, this.gain = this.context.createGain(), this.gain.channelCountMode = "explicit", this.gain.channelCount = 2, this.source.connect(this.gain), this.channelSplit = this.context.createChannelSplitter(2), this.gain.connect(this.channelSplit), this.analysers = [null, null]; for (var u = 0; u < 2; u++) { var l = this.context.createAnalyser(); l.fftSize = this.fftSize, this.channelSplit.connect(l, u), this.analysers[u] = l } }, r.prototype.update = function () { if (this.analysers) { for (var a = new Uint8Array(this.fftSize), u = 0; u < 2; u++) { var l = this.visData[u + 1], d = this.analysers[u]; d.getByteFrequencyData(a); for (var c = 0; c < l.spectrum.length; c++)l.spectrum[c] = a[c] / 255; d.getByteTimeDomainData(a); for (var c = 0; c < l.waveform.length; c++)l.waveform[c] = a[c] / 255 * 2 - 1 } for (var E = this.visData[0], c = 0; c < E.spectrum.length; c++)E.spectrum[c] = this.visData[1].spectrum[c] / 2 + this.visData[2].spectrum[c] / 2; for (var c = 0; c < E.waveform.length; c++)E.waveform[c] = this.visData[1].waveform[c] / 2 + this.visData[2].waveform[c] / 2; this.beat = !1; for (var h = 0, g = 0, c = 0; c < this.fftSize; c++)h += Math.abs(this.visData[1].waveform[c]), g += Math.abs(this.visData[2].waveform[c]); var P = Math.max(h, g) / this.fftSize; P >= this.movingThreshold && P >= this.threshold ? (this.movingThreshold = P, this.beat = !0) : this.movingThreshold = this.movingThreshold * (1 - this.decay) + P * this.decay } }, r.prototype.load = function (a, u) { var l = this, d; a instanceof HTMLMediaElement ? (d = a, this.source = this.context.createMediaElementSource(d)) : (d = new Audio, d.src = a, this.source = this.context.createMediaElementSource(d)); var c = function () { l.connectToNode(l.source), l.source.connect(l.context.destination), u && u(d), d.removeEventListener("canplay", c) }; return d.readyState < 3 ? d.addEventListener("canplay", c) : c(), d }, r.prototype.getWaveform = function (a) { return a === void 0 && (a = s.Channels.CENTER), this.visData[a].waveform }, r.prototype.getSpectrum = function (a) { return a === void 0 && (a = s.Channels.CENTER), this.visData[a].spectrum }, r.prototype.isBeat = function () { return this.beat }, r }(n.default); o.default = _ }])
+      }, function (v, o, t) { o.__esModule = !0; var f = function () { function i(s) { this.gl = s, this.buffers = {} } return i.prototype.getGl = function () { return this.gl }, i.prototype.cacheBuffer = function (s, n) { this.buffers[s] = n }, i.prototype.getBuffer = function (s) { return this.buffers[s] }, i.prototype.destroy = function () { for (var s in this.buffers) this.buffers.hasOwnProperty(s) && this.buffers[s].destroy() }, i }(); o.default = f }, function (v, o, t) { var f = this && this.__extends || function () { var e = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (r, a) { r.__proto__ = a } || function (r, a) { for (var u in a) a.hasOwnProperty(u) && (r[u] = a[u]) }; return function (r, a) { e(r, a); function u() { this.constructor = r } r.prototype = a === null ? Object.create(a) : (u.prototype = a.prototype, new u) } }(); o.__esModule = !0; var i = t(24), s = t(0), n = t(141), _ = function (e) { f(r, e); function r(a) { var u = e.call(this) || this; if (u.movingThreshold = 0, a = i.default(a || {}, { decay: .005, fftSize: 512, threshold: .125 }), a.context) u.context = a.context; else if (window.webkitAudioContext) u.context = new window.webkitAudioContext; else if (window.AudioContext) u.context = new window.AudioContext; else throw new Error("Cannot create webaudio context"); u.fftSize = a.fftSize, u.threshold = a.threshold, u.decay = a.decay, u.visData = [null, null, null]; for (var l = 0; l < 3; l++) { var d = new Float32Array(u.fftSize / 2), c = new Float32Array(u.fftSize); u.visData[l] = { spectrum: d, waveform: c } } return u } return r.prototype.connectToNode = function (a) { this.source = a, this.gain = this.context.createGain(), this.gain.channelCountMode = "explicit", this.gain.channelCount = 2, this.source.connect(this.gain), this.channelSplit = this.context.createChannelSplitter(2), this.gain.connect(this.channelSplit), this.analysers = [null, null]; for (var u = 0; u < 2; u++) { var l = this.context.createAnalyser(); l.fftSize = this.fftSize, this.channelSplit.connect(l, u), this.analysers[u] = l } }, r.prototype.update = function () { if (this.analysers) { for (var a = new Uint8Array(this.fftSize), u = 0; u < 2; u++) { var l = this.visData[u + 1], d = this.analysers[u]; d.getByteFrequencyData(a); for (var c = 0; c < l.spectrum.length; c++)l.spectrum[c] = a[c] / 255; d.getByteTimeDomainData(a); for (var c = 0; c < l.waveform.length; c++)l.waveform[c] = a[c] / 255 * 2 - 1 } for (var E = this.visData[0], c = 0; c < E.spectrum.length; c++)E.spectrum[c] = this.visData[1].spectrum[c] / 2 + this.visData[2].spectrum[c] / 2; for (var c = 0; c < E.waveform.length; c++)E.waveform[c] = this.visData[1].waveform[c] / 2 + this.visData[2].waveform[c] / 2; this.beat = !1; for (var h = 0, g = 0, c = 0; c < this.fftSize; c++)h += Math.abs(this.visData[1].waveform[c]), g += Math.abs(this.visData[2].waveform[c]); var P = Math.max(h, g) / this.fftSize; P >= this.movingThreshold && P >= this.threshold ? (this.movingThreshold = P, this.beat = !0) : this.movingThreshold = this.movingThreshold * (1 - this.decay) + P * this.decay } }, r.prototype.load = function (a, u) { var l = this, d; a instanceof HTMLMediaElement ? (d = a, this.source = this.context.createMediaElementSource(d)) : (d = new Audio, d.src = a, this.source = this.context.createMediaElementSource(d)); var c = function () { l.connectToNode(l.source), l.source.connect(l.context.destination), u && u(d), d.removeEventListener("canplay", c) }; return d.readyState < 3 ? d.addEventListener("canplay", c) : c(), d }, r.prototype.getWaveform = function (a) { return a === void 0 && (a = s.Channels.CENTER), this.visData[a].waveform }, r.prototype.getSpectrum = function (a) { return a === void 0 && (a = s.Channels.CENTER), this.visData[a].spectrum }, r.prototype.isBeat = function () { return this.beat }, r }(n.default); o.default = _ }])
     })(se, se.exports); var De = se.exports;
     const Te = Ye(De), Je = Xe({ __proto__: null, default: Te }, [De]), Me = Te ?? Je;
     const $t = document.getElementById("avs-canvas"), ie = document.getElementById("audio-file"), Ct = document.getElementById("audio"), Ze = document.getElementById("stop"), Qe = document.getElementById("status");
@@ -969,13 +991,19 @@
         // Source/position: centre channel, centre/middle. 16-color AVS palette.
         // This layer is intentionally rendered first so DynamicMovement turns it into the centre-light tunnel.
         {
-          type: "SuperScope", blendMode: "ADDITIVE", source: "WAVEFORM", channel: "CENTER", drawMode: "DOTS", thickness: 1,
-          colors: RGB_AVS, cycleSpeed: .006,
+          type: "SuperScope",
+          blendMode: "ADDITIVE",
+          source: "WAVEFORM",
+          channel: "CENTER",
+          drawMode: "DOTS",
+          thickness: 1,
+          colors: RGB_AVS,
+          cycleSpeed: .006,
           code: {
-            init: "n=3072; arms=16; rot=0;",
-            perFrame: "rot=rot+0.0017;",
-            onBeat: "rot=rot+0.030;",
-            perPoint: "arm=floor(i*arms); p=i*arms-arm; a=arm*6.28318/arms+rot; vv=(v*0.5+0.5); d=0.055+p*(0.92+vv*0.13); wig=(v*0.080)*(0.25+p); x=cos(a)*d-sin(a)*wig; y=sin(a)*d+cos(a)*wig;"
+            init: "n=w; arms=16; rot=0; pulse=0; hold=0; retrig=0;",
+            perFrame: "active=above(hold,0); fire=band(active,below(retrig,1)); pulse=min(pulse*0.989+fire*0.07,0.65); rot=rot+0.0012+pulse*0.003; retrig=if(fire,60,max(retrig-1,0)); hold=max(hold-1,0);",
+            onBeat: "pulse=min(pulse+0.16,0.65); hold=300; retrig=1; rot=rot+0.015;",
+            perPoint: "arm=floor(i*arms); p=i*arms-arm; a=arm*6.28318/arms+rot; vv=(v*0.5+0.5); d=0.055+p*(0.92+vv*0.13+pulse*0.10); wig=(v*(0.080+pulse*0.040))*(0.25+p); x=cos(a)*d-sin(a)*wig; y=sin(a)*d+cos(a)*wig;"
           }
         },
 
@@ -985,7 +1013,7 @@
           type: "SuperScope", blendMode: "ADDITIVE", source: "WAVEFORM", channel: "CENTER", drawMode: "DOTS", thickness: 1,
           colors: ["#808080", "#c0c0c0", "#202020"], cycleSpeed: .003,
           code: {
-            init: "n=w; dt=0.01; t=0; sc=1;",
+            init: "n=w*0.15; dt=0.01; t=0; sc=1;",
             perFrame: "t=t+dt;dt=0.9*dt+0.001; t=if(above(t,3.14159*2),t-3.14159*2,t);",
             onBeat: "dt=sc;sc=-sc;",
             perPoint: "x=cos(2*i+t)*0.9*(v*0.5+0.5); y=sin(i*2+t)*0.9*(v*0.5+0.5);"
@@ -995,25 +1023,37 @@
         // Reference-video helper: dense colour-cycling rays from the centre.
         // These emulate the light beams produced by the additive render mode + movement feedback.
         {
-          type: "SuperScope", blendMode: "ADDITIVE", source: "SPECTRUM", channel: "CENTER", drawMode: "DOTS", thickness: 1,
-          colors: RGB_RAYS, cycleSpeed: .006,
+          type: "SuperScope",
+          blendMode: "ADDITIVE",
+          source: "SPECTRUM",
+          channel: "CENTER",
+          drawMode: "DOTS",
+          thickness: 1,
+          colors: RGB_RAYS,
+          cycleSpeed: .006,
           code: {
-            init: "n=3584; rays=48; spin=0;",
-            perFrame: "spin=spin+0.0014;",
-            onBeat: "spin=spin+0.026;",
-            perPoint: "ray=floor(i*rays); p=i*rays-ray; a=ray*6.28318/rays+spin*0.045; amp=max(v,0); d=p*(0.05+1.04*(0.18+amp*0.82)); x=cos(a)*d; y=sin(a)*d;"
+            init: "n=w; rays=48; spin=0; pulse=0; hold=0; retrig=0;",
+            perFrame: "active=above(hold,0); fire=band(active,below(retrig,1)); pulse=min(pulse*0.988+fire*0.06,0.55); spin=spin+0.003+pulse*0.020+fire*0.004; retrig=if(fire,60,max(retrig-1,0)); hold=max(hold-1,0);",
+            onBeat: "pulse=min(pulse+0.10,0.55); hold=300; retrig=1; spin=spin+0.010;",
+            perPoint: "ray=floor(i*rays); p=i*rays-ray; a=ray*6.28318/rays+spin*0.045; amp=max(v,0); d=p*(0.05+1.04*(0.18+amp*0.91)); x=cos(a)*d; y=sin(a)*d;"
           }
         },
 
-        // Reference-video helper: thin hard beam strokes. Also RGB-cycling now, not fixed green.
+        // Reference-video helper: thin hard beam strokes.
         {
-          type: "SuperScope", blendMode: "ADDITIVE", source: "WAVEFORM", channel: "CENTER", drawMode: "LINES", thickness: 1,
-          colors: RGB_RAYS, cycleSpeed: .005,
+          type: "SuperScope",
+          blendMode: "ADDITIVE",
+          source: "WAVEFORM",
+          channel: "CENTER",
+          drawMode: "LINES",
+          thickness: 1,
+          colors: RGB_RAYS,
+          cycleSpeed: .006,
           code: {
-            init: "n=96; beams=48; spin=0;",
-            perFrame: "spin=spin+0.0010;",
-            onBeat: "spin=spin+0.020;",
-            perPoint: "seg=floor(i*0.5); endpoint=i-seg*2; a=seg*6.28318/beams+spin*0.035; vv=(v*0.5+0.5); d=if(above(endpoint,0.5),0.98*(0.70+vv*0.30),0.010); x=cos(a)*d; y=sin(a)*d;"
+            init: "n=w; beams=48; spin=0; pulse=0; hold=0; retrig=0;",
+            perFrame: "active=above(hold,0); fire=band(active,below(retrig,1)); pulse=min(pulse*0.988+fire*0.06,0.55); spin=spin+0.003+pulse*0.020+fire*0.004; retrig=if(fire,120,max(retrig-1,0)); hold=max(hold-1,0);",
+            onBeat: "pulse=min(pulse+0.10,0.55); hold=600; retrig=1; spin=spin+0.010;",
+            perPoint: "seg=floor(i*0.5); endpoint=i-seg*2; a=seg*6.28318/beams+spin*0.035; vv=(v*0.5+0.5); d=if(above(endpoint,0.5),0.98*(0.70+vv*0.30+pulse*0.22),0.010); x=cos(a)*d; y=sin(a)*d;"
           }
         },
 
@@ -1024,7 +1064,7 @@
         { type: "MovingParticle", enabled: !0, onBeatSizeChange: !0, color: "#000000", distance: 32, particleSize: 4, onBeatParticleSize: 8, blendMode: "REPLACE" },
 
         // EDITOR DATA 6: Trans / Movement. Bilinear filter on, no blend, custom polar code.
-        { type: "DynamicMovement", coord: "POLAR", bFilter: !0, compat: !0, noGrid: !1, gridW: 8, gridH: 8, blend: !1, code: { init: "", perFrame: "", onBeat: "", perPixel: "r=cos(r*3); d=d*cos(d*1.1);" } }
+        { type: "DynamicMovement", coord: "POLAR", bFilter: !0, compat: !0, noGrid: !1, gridW: 8, gridH: 8, blend: !1, code: { init: "wave=0; kick=0; phase=0;", perFrame: "", onBeat: "", perPixel: "r=cos(r*3); d=d*cos(d*1.1);" } }
       ]
     };
 
@@ -1064,7 +1104,7 @@
     }
     function ye() {
       if (!Kt) {
-        St = new Me.WebAudioAnalyser;
+        St = new Me.WebAudioAnalyser({ threshold: .05, decay: .000125 });
         Ve(St, Ct);
         try { St.load(Ct, () => { qe = !0, Wt(Ct.paused ? "Audio bereit. Play drücken." : "spielt.") }) }
         catch (rt) { console.error(rt), Wt(`Audio-Initialisierung fehlgeschlagen: ${rt.message}`) }
@@ -1072,7 +1112,7 @@
         Kt.loadPreset(Ae);
         Kt.start();
         _e();
-        console.log("Loaded Zen-X editor-exact v1 preset with fixed 88% visual level", Ae);
+        console.log("Loaded WebAMP v0.21", Ae);
       }
     }
     async function Re() { St && St.context && St.context.state !== "running" && await St.context.resume() }
@@ -1083,336 +1123,337 @@
     Ct.addEventListener("error", () => { const rt = Ct.error; Wt(rt ? `Audio-Fehler ${rt.code}. Datei nicht abspielbar?` : "Audio-Fehler.") });
     window.addEventListener("error", rt => { console.error(rt.error || rt.message), Wt(`JavaScript-Fehler: ${rt.message}`) });
     window.addEventListener("unhandledrejection", rt => { console.error(rt.reason); const ut = rt.reason && rt.reason.message ? rt.reason.message : String(rt.reason); Wt(`Promise-Fehler: ${ut}`) });
-  
+
   </script>
 
   <script>
-  "use strict";
+    "use strict";
 
-  (() => {
-    const audio = document.getElementById("audio");
-    const fileInput = document.getElementById("audio-file");
-    const trackList = document.getElementById("trackList");
-    const emptyList = document.getElementById("emptyList");
-    const trackTitle = document.getElementById("track-title");
-    const status = document.getElementById("status");
+    (() => {
+      const audio = document.getElementById("audio");
+      const fileInput = document.getElementById("audio-file");
+      const trackList = document.getElementById("trackList");
+      const emptyList = document.getElementById("emptyList");
+      const trackTitle = document.getElementById("track-title");
+      const status = document.getElementById("status");
 
-    const btnPlay = document.getElementById("play");
-    const btnPause = document.getElementById("pause");
-    const btnStop = document.getElementById("stop");
-    const btnPrev = document.getElementById("prev");
-    const btnNext = document.getElementById("next");
-    const btnAdd = document.getElementById("addFiles");
-    const btnAddTop = document.getElementById("addFilesTop");
-    const btnFull = document.getElementById("full");
-    const btnTogglePlaylist = document.getElementById("togglePlaylist");
-    const seek = document.getElementById("seek");
-    const vol = document.getElementById("vol");
+      const btnPlay = document.getElementById("play");
+      const btnPause = document.getElementById("pause");
+      const btnStop = document.getElementById("stop");
+      const btnPrev = document.getElementById("prev");
+      const btnNext = document.getElementById("next");
+      const btnAdd = document.getElementById("addFiles");
+      const btnAddTop = document.getElementById("addFilesTop");
+      const btnFull = document.getElementById("full");
+      const btnTogglePlaylist = document.getElementById("togglePlaylist");
+      const seek = document.getElementById("seek");
+      const vol = document.getElementById("vol");
 
-    const tracks = [];
-    let activeIndex = -1;
-    let seeking = false;
+      const tracks = [];
+      let activeIndex = -1;
+      let seeking = false;
 
-    const audioNamePattern = /\.(mp3|wav|ogg|oga|m4a|aac|flac|webm|opus)$/i;
+      const audioNamePattern = /\.(mp3|wav|ogg|oga|m4a|aac|flac|webm|opus)$/i;
 
-    function isAudioFile(file) {
-      return file && (file.type.startsWith("audio/") || audioNamePattern.test(file.name));
-    }
-
-    function cleanTitle(file) {
-      return file ? file.name.replace(/\.[^.]+$/, "") : "";
-    }
-
-    function fmtTime(sec) {
-      if (!isFinite(sec) || sec < 0) sec = 0;
-      const m = Math.floor(sec / 60);
-      const s = Math.floor(sec % 60);
-      return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
-    }
-
-    function setStatus(text) {
-      status.textContent = text;
-    }
-
-    function setCurrentTitle(text) {
-      trackTitle.textContent = text || "";
-      setStatus(text || "Audios per Drag & Drop hinzufügen.");
-    }
-
-    function updateButtons() {
-      const hasTracks = tracks.length > 0;
-      btnPlay.disabled = !hasTracks && !audio.src;
-      btnPause.disabled = audio.paused;
-      btnStop.disabled = !audio.src;
-      btnPrev.disabled = !hasTracks;
-      btnNext.disabled = !hasTracks;
-    }
-
-    function renderPlaylist() {
-      trackList.innerHTML = "";
-      emptyList.style.display = tracks.length ? "none" : "block";
-      document.body.classList.toggle("hasTracks", tracks.length > 0);
-
-      tracks.forEach((track, index) => {
-        const li = document.createElement("li");
-        li.className = index === activeIndex ? "active" : "";
-
-        const nr = document.createElement("span");
-        nr.className = "nr";
-        nr.textContent = String(index + 1).padStart(2, "0");
-
-        const name = document.createElement("span");
-        name.className = "name";
-        name.textContent = track.title;
-        name.title = track.file.name;
-
-        const time = document.createElement("span");
-        time.className = "time";
-        time.textContent = isFinite(track.duration) ? fmtTime(track.duration) : "--:--";
-
-        li.append(nr, name, time);
-        li.addEventListener("click", () => playTrack(index));
-        trackList.appendChild(li);
-      });
-
-      updateButtons();
-    }
-
-    function addFiles(fileList, options = {}) {
-      const files = Array.from(fileList || []).filter(isAudioFile);
-
-      if (!files.length) {
-        setStatus("Keine unterstützten Audiodateien gefunden.");
-        return;
+      function isAudioFile(file) {
+        return file && (file.type.startsWith("audio/") || audioNamePattern.test(file.name));
       }
 
-      const existing = new Set(tracks.map(track => track.key));
-      let firstAdded = -1;
-      let added = 0;
+      function cleanTitle(file) {
+        return file ? file.name.replace(/\.[^.]+$/, "") : "";
+      }
 
-      for (const file of files) {
-        const key = `${file.name}|${file.size}|${file.lastModified}`;
-        if (existing.has(key)) continue;
-        existing.add(key);
+      function fmtTime(sec) {
+        if (!isFinite(sec) || sec < 0) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+      }
 
-        tracks.push({
-          file,
-          key,
-          title: cleanTitle(file),
-          url: URL.createObjectURL(file),
-          duration: NaN
+      function setStatus(text) {
+        status.textContent = text;
+      }
+
+      function setCurrentTitle(text) {
+        trackTitle.textContent = text || "";
+        setStatus(text || "Audios per Drag & Drop hinzufügen.");
+      }
+
+      function updateButtons() {
+        const hasTracks = tracks.length > 0;
+        btnPlay.disabled = !hasTracks && !audio.src;
+        btnPause.disabled = audio.paused;
+        btnStop.disabled = !audio.src;
+        btnPrev.disabled = !hasTracks;
+        btnNext.disabled = !hasTracks;
+      }
+
+      function renderPlaylist() {
+        trackList.innerHTML = "";
+        emptyList.style.display = tracks.length ? "none" : "block";
+        document.body.classList.toggle("hasTracks", tracks.length > 0);
+
+        tracks.forEach((track, index) => {
+          const li = document.createElement("li");
+          li.className = index === activeIndex ? "active" : "";
+
+          const nr = document.createElement("span");
+          nr.className = "nr";
+          nr.textContent = String(index + 1).padStart(2, "0");
+
+          const name = document.createElement("span");
+          name.className = "name";
+          name.textContent = track.title;
+          name.title = track.file.name;
+
+          const time = document.createElement("span");
+          time.className = "time";
+          time.textContent = isFinite(track.duration) ? fmtTime(track.duration) : "--:--";
+
+          li.append(nr, name, time);
+          li.addEventListener("click", () => playTrack(index));
+          trackList.appendChild(li);
         });
 
-        if (firstAdded === -1) firstAdded = tracks.length - 1;
-        added++;
+        updateButtons();
       }
 
-      if (added) {
-        setStatus(`${added} Datei(en) zur PlayList hinzugefügt.`);
-        document.body.classList.remove("playlistHidden");
-      } else {
-        setStatus("Datei(en) waren bereits in der PlayList.");
+      function addFiles(fileList, options = {}) {
+        const files = Array.from(fileList || []).filter(isAudioFile);
+
+        if (!files.length) {
+          setStatus("Keine unterstützten Audiodateien gefunden.");
+          return;
+        }
+
+        const existing = new Set(tracks.map(track => track.key));
+        let firstAdded = -1;
+        let added = 0;
+
+        for (const file of files) {
+          const key = `${file.name}|${file.size}|${file.lastModified}`;
+          if (existing.has(key)) continue;
+          existing.add(key);
+
+          tracks.push({
+            file,
+            key,
+            title: cleanTitle(file),
+            url: URL.createObjectURL(file),
+            duration: NaN
+          });
+
+          if (firstAdded === -1) firstAdded = tracks.length - 1;
+          added++;
+        }
+
+        if (added) {
+          setStatus(`${added} Datei(en) zur PlayList hinzugefügt.`);
+          document.body.classList.remove("playlistHidden");
+        } else {
+          setStatus("Datei(en) waren bereits in der PlayList.");
+        }
+
+        renderPlaylist();
+
+        if (activeIndex === -1 && firstAdded !== -1) {
+          loadTrack(firstAdded, false);
+        }
+
+        if (options.playIfIdle && firstAdded !== -1 && audio.paused) {
+          playTrack(firstAdded);
+        }
       }
 
-      renderPlaylist();
+      function loadTrack(index, autoplay) {
+        if (!tracks[index]) return;
+        activeIndex = index;
 
-      if (activeIndex === -1 && firstAdded !== -1) {
-        loadTrack(firstAdded, false);
+        const track = tracks[index];
+        if (audio.src !== track.url) {
+          audio.src = track.url;
+          audio.load();
+        }
+
+        setCurrentTitle(track.title);
+        renderPlaylist();
+
+        if (autoplay) playCurrent();
       }
 
-      if (options.playIfIdle && firstAdded !== -1 && audio.paused) {
-        playTrack(firstAdded);
-      }
-    }
+      async function playCurrent() {
+        if (activeIndex === -1 && tracks.length) loadTrack(0, false);
 
-    function loadTrack(index, autoplay) {
-      if (!tracks[index]) return;
-      activeIndex = index;
+        if (activeIndex === -1) {
+          setStatus("Keine Tracks in der PlayList. Dateien per Drag & Drop hinzufügen.");
+          fileInput.click();
+          return;
+        }
 
-      const track = tracks[index];
-      if (audio.src !== track.url) {
-        audio.src = track.url;
-        audio.load();
-      }
+        try {
+          await audio.play();
+          document.body.classList.add("isPlaying");
+          setCurrentTitle(tracks[activeIndex].title);
+        } catch (err) {
+          console.error(err);
+          setStatus("PLAY erneut drücken. (" + err.message + ")");
+        }
 
-      setCurrentTitle(track.title);
-      renderPlaylist();
-
-      if (autoplay) playCurrent();
-    }
-
-    async function playCurrent() {
-      if (activeIndex === -1 && tracks.length) loadTrack(0, false);
-
-      if (activeIndex === -1) {
-        setStatus("Keine Tracks in der PlayList. Dateien per Drag & Drop hinzufügen.");
-        fileInput.click();
-        return;
-      }
-
-      try {
-        await audio.play();
-        document.body.classList.add("isPlaying");
-        setCurrentTitle(tracks[activeIndex].title);
-      } catch (err) {
-        console.error(err);
-        setStatus("PLAY erneut drücken. (" + err.message + ")");
-      }
-
-      renderPlaylist();
-    }
-
-    function playTrack(index) {
-      loadTrack(index, true);
-    }
-
-    function pauseCurrent() {
-      audio.pause();
-      document.body.classList.remove("isPlaying");
-      setStatus("Pause.");
-      renderPlaylist();
-    }
-
-    function stopCurrent() {
-      audio.pause();
-      try { audio.currentTime = 0; } catch (_) {}
-      document.body.classList.remove("isPlaying");
-      if (activeIndex >= 0 && tracks[activeIndex]) setCurrentTitle(tracks[activeIndex].title);
-      setStatus("Gestoppt.");
-      renderPlaylist();
-    }
-
-    function nextTrack() {
-      if (!tracks.length) return setStatus("Keine Tracks in der PlayList.");
-      playTrack((activeIndex + 1 + tracks.length) % tracks.length);
-    }
-
-    function prevTrack() {
-      if (!tracks.length) return setStatus("Keine Tracks in der PlayList.");
-      if (audio.currentTime > 3) {
-        audio.currentTime = 0;
-        return;
-      }
-      playTrack((activeIndex - 1 + tracks.length) % tracks.length);
-    }
-
-    fileInput.addEventListener("change", () => {
-      addFiles(fileInput.files, { playIfIdle: false });
-      fileInput.value = "";
-    });
-
-    btnAdd.addEventListener("click", () => fileInput.click());
-    btnAddTop.addEventListener("click", () => fileInput.click());
-    btnPlay.addEventListener("click", () => audio.paused ? playCurrent() : pauseCurrent());
-    btnPause.addEventListener("click", pauseCurrent);
-    btnStop.addEventListener("click", stopCurrent);
-    btnNext.addEventListener("click", nextTrack);
-    btnPrev.addEventListener("click", prevTrack);
-
-    btnTogglePlaylist.addEventListener("click", () => {
-      document.body.classList.toggle("playlistHidden");
-    });
-
-    btnFull.addEventListener("click", async () => {
-      try {
-        if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
-        else await document.exitFullscreen();
-      } catch (err) {
-        setStatus("Fullscreen nicht verfügbar: " + err.message);
-      }
-    });
-
-    vol.addEventListener("input", () => {
-      audio.volume = Number(vol.value);
-    });
-    audio.volume = Number(vol.value);
-
-    seek.addEventListener("input", () => {
-      seeking = true;
-    });
-
-    seek.addEventListener("change", () => {
-      if (isFinite(audio.duration) && audio.duration > 0) {
-        audio.currentTime = Number(seek.value) / 1000 * audio.duration;
-      }
-      seeking = false;
-    });
-
-    audio.addEventListener("loadedmetadata", () => {
-      if (activeIndex >= 0 && tracks[activeIndex]) {
-        tracks[activeIndex].duration = audio.duration;
         renderPlaylist();
       }
-    });
 
-    audio.addEventListener("timeupdate", () => {
-      document.getElementById("time").textContent = fmtTime(audio.currentTime || 0);
-      if (!seeking && isFinite(audio.duration) && audio.duration > 0) {
-        seek.value = String(Math.floor(audio.currentTime / audio.duration * 1000));
+      function playTrack(index) {
+        loadTrack(index, true);
       }
-    });
 
-    audio.addEventListener("play", () => {
-      document.body.classList.add("isPlaying");
-      renderPlaylist();
-    });
+      function pauseCurrent() {
+        audio.pause();
+        document.body.classList.remove("isPlaying");
+        setStatus("Pause.");
+        renderPlaylist();
+      }
 
-    audio.addEventListener("pause", () => {
-      document.body.classList.remove("isPlaying");
-      renderPlaylist();
-    });
+      function stopCurrent() {
+        audio.pause();
+        try { audio.currentTime = 0; } catch (_) { }
+        document.body.classList.remove("isPlaying");
+        if (activeIndex >= 0 && tracks[activeIndex]) setCurrentTitle(tracks[activeIndex].title);
+        setStatus("Gestoppt.");
+        renderPlaylist();
+      }
 
-    audio.addEventListener("ended", () => {
-      nextTrack();
-    });
+      function nextTrack() {
+        if (!tracks.length) return setStatus("Keine Tracks in der PlayList.");
+        playTrack((activeIndex + 1 + tracks.length) % tracks.length);
+      }
 
-    let dragDepth = 0;
+      function prevTrack() {
+        if (!tracks.length) return setStatus("Keine Tracks in der PlayList.");
+        if (audio.currentTime > 3) {
+          audio.currentTime = 0;
+          return;
+        }
+        playTrack((activeIndex - 1 + tracks.length) % tracks.length);
+      }
 
-    ["dragenter", "dragover"].forEach(type => {
-      window.addEventListener(type, event => {
-        event.preventDefault();
-        if (type === "dragenter") dragDepth++;
-        document.body.classList.add("dragover");
+      fileInput.addEventListener("change", () => {
+        addFiles(fileInput.files, { playIfIdle: false });
+        fileInput.value = "";
       });
-    });
 
-    window.addEventListener("dragleave", event => {
-      event.preventDefault();
-      dragDepth = Math.max(0, dragDepth - 1);
-      if (dragDepth === 0) document.body.classList.remove("dragover");
-    });
+      btnAdd.addEventListener("click", () => fileInput.click());
+      btnAddTop.addEventListener("click", () => fileInput.click());
+      btnPlay.addEventListener("click", () => audio.paused ? playCurrent() : pauseCurrent());
+      btnPause.addEventListener("click", pauseCurrent);
+      btnStop.addEventListener("click", stopCurrent);
+      btnNext.addEventListener("click", nextTrack);
+      btnPrev.addEventListener("click", prevTrack);
 
-    window.addEventListener("drop", event => {
-      event.preventDefault();
-      dragDepth = 0;
-      document.body.classList.remove("dragover");
-      addFiles(event.dataTransfer && event.dataTransfer.files, { playIfIdle: false });
-    });
+      btnTogglePlaylist.addEventListener("click", () => {
+        document.body.classList.toggle("playlistHidden");
+      });
 
-    document.addEventListener("keydown", event => {
-      const tag = event.target && event.target.tagName;
-      if (["INPUT", "TEXTAREA", "SELECT", "BUTTON"].includes(tag)) return;
+      btnFull.addEventListener("click", async () => {
+        try {
+          if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+          else await document.exitFullscreen();
+        } catch (err) {
+          setStatus("Fullscreen nicht verfügbar: " + err.message);
+        }
+      });
 
-      if (event.code === "Space") {
+      vol.addEventListener("input", () => {
+        audio.volume = Number(vol.value);
+      });
+      audio.volume = Number(vol.value);
+
+      seek.addEventListener("input", () => {
+        seeking = true;
+      });
+
+      seek.addEventListener("change", () => {
+        if (isFinite(audio.duration) && audio.duration > 0) {
+          audio.currentTime = Number(seek.value) / 1000 * audio.duration;
+        }
+        seeking = false;
+      });
+
+      audio.addEventListener("loadedmetadata", () => {
+        if (activeIndex >= 0 && tracks[activeIndex]) {
+          tracks[activeIndex].duration = audio.duration;
+          renderPlaylist();
+        }
+      });
+
+      audio.addEventListener("timeupdate", () => {
+        document.getElementById("time").textContent = fmtTime(audio.currentTime || 0);
+        if (!seeking && isFinite(audio.duration) && audio.duration > 0) {
+          seek.value = String(Math.floor(audio.currentTime / audio.duration * 1000));
+        }
+      });
+
+      audio.addEventListener("play", () => {
+        document.body.classList.add("isPlaying");
+        renderPlaylist();
+      });
+
+      audio.addEventListener("pause", () => {
+        document.body.classList.remove("isPlaying");
+        renderPlaylist();
+      });
+
+      audio.addEventListener("ended", () => {
+        nextTrack();
+      });
+
+      let dragDepth = 0;
+
+      ["dragenter", "dragover"].forEach(type => {
+        window.addEventListener(type, event => {
+          event.preventDefault();
+          if (type === "dragenter") dragDepth++;
+          document.body.classList.add("dragover");
+        });
+      });
+
+      window.addEventListener("dragleave", event => {
         event.preventDefault();
-        audio.paused ? playCurrent() : pauseCurrent();
-      }
+        dragDepth = Math.max(0, dragDepth - 1);
+        if (dragDepth === 0) document.body.classList.remove("dragover");
+      });
 
-      if (event.key.toLowerCase() === "p") document.body.classList.toggle("playlistHidden");
-      if (event.key.toLowerCase() === "f") btnFull.click();
-      if (event.code === "ArrowRight") nextTrack();
-      if (event.code === "ArrowLeft") prevTrack();
-    });
+      window.addEventListener("drop", event => {
+        event.preventDefault();
+        dragDepth = 0;
+        document.body.classList.remove("dragover");
+        addFiles(event.dataTransfer && event.dataTransfer.files, { playIfIdle: false });
+      });
 
-    window.addEventListener("beforeunload", () => {
-      for (const track of tracks) {
-        if (track.url) URL.revokeObjectURL(track.url);
-      }
-    });
+      document.addEventListener("keydown", event => {
+        const tag = event.target && event.target.tagName;
+        if (["INPUT", "TEXTAREA", "SELECT", "BUTTON"].includes(tag)) return;
 
-    setCurrentTitle("");
-    renderPlaylist();
-  })();
+        if (event.code === "Space") {
+          event.preventDefault();
+          audio.paused ? playCurrent() : pauseCurrent();
+        }
+
+        if (event.key.toLowerCase() === "p") document.body.classList.toggle("playlistHidden");
+        if (event.key.toLowerCase() === "f") btnFull.click();
+        if (event.code === "ArrowRight") nextTrack();
+        if (event.code === "ArrowLeft") prevTrack();
+      });
+
+      window.addEventListener("beforeunload", () => {
+        for (const track of tracks) {
+          if (track.url) URL.revokeObjectURL(track.url);
+        }
+      });
+
+      setCurrentTitle("");
+      renderPlaylist();
+    })();
   </script>
 </body>
+
 </html>
